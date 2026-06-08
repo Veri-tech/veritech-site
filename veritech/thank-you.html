@@ -735,7 +735,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   .footer-logo-wrap{grid-column:1/-1;}
 
   /* Thank you */
-  .ty-inner{max-width:100%;}
+  
   .ty-steps{margin-bottom:32px;}
   .ty-h1{font-size:clamp(36px,9vw,56px);}
 
@@ -761,10 +761,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 .footer-bottom .built-by{color:var(--indigo);}
 .footer-bottom .built-by:hover{color:#8B84FF;}
 
-/* Thank you — centred layout fix */
-.ty-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 0 80px;}
-.ty-hero .container{display:flex;align-items:center;justify-content:center;width:100%;}
-.ty-inner{max-width:680px;width:100%;margin:0 auto;}
+
 
 /* Footer responsive */
 @media(max-width:1024px){
@@ -782,6 +779,11 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 }
 @media(max-width:480px){
   .footer-links{grid-template-columns:1fr;}
+}
+
+/* Footer wide screen */
+@media(min-width:1400px){
+  .footer-top{grid-template-columns:320px 1fr;}
 }
 </style>
 </head>
