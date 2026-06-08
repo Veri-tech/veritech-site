@@ -756,6 +756,24 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 
 .footer-bottom .built-by{color:var(--indigo);}
 .footer-bottom .built-by:hover{color:#8B84FF;}
+
+/* Thank you — centred layout fix */
+.ty-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 0 80px;}
+.ty-hero .container{display:flex;align-items:center;justify-content:center;width:100%;}
+.ty-inner{max-width:680px;width:100%;margin:0 auto;}
+
+/* Footer mobile */
+@media(max-width:768px){
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-logo-wrap{grid-column:1/-1;margin-bottom:8px;}
+  .footer-col-title{font-size:10px;margin-bottom:12px;}
+  .footer-col ul{gap:8px;}
+  .footer-col li a{font-size:12px;}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px;}
+}
 </style>
 </head>
 <body>

@@ -806,6 +806,39 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 
 .footer-bottom .built-by{color:var(--indigo);}
 .footer-bottom .built-by:hover{color:#8B84FF;}
+
+/* Footer mobile */
+@media(max-width:768px){
+  .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-logo-wrap{grid-column:1/-1;margin-bottom:8px;}
+  .footer-col-title{font-size:10px;margin-bottom:12px;}
+  .footer-col ul{gap:8px;}
+  .footer-col li a{font-size:12px;}
+}
+@media(max-width:480px){
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:8px;}
+}
+
+/* Blog layout improvements */
+.blog-hero{min-height:50vh;}
+.blog-section{padding:64px 0 80px;}
+.cat-nav{margin-bottom:40px;}
+.empty-state{max-width:560px;}
+.cat-preview-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:14px;
+  margin-top:52px;
+}
+@media(max-width:900px){
+  .cat-preview-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:560px){
+  .cat-preview-grid{grid-template-columns:1fr;}
+  .cat-nav{gap:6px;}
+  .cat-nav-item{font-size:9px;padding:6px 10px;}
+}
 </style>
 </head>
 <body>
