@@ -1384,27 +1384,24 @@ document.querySelectorAll('.stack-tab').forEach(tab => {
     btn.disabled = true;
     btn.innerHTML = '<i class="ti ti-loader" style="animation:spin .8s linear infinite"></i> Sending...';
 
-    var payload = JSON.stringify({
-      name: name,
-      email: email,
-      company: company || '',
-      service: service,
-      budget: budget || '',
-      message: message
-    });
+    // Use FormData + URLSearchParams — survives Google's redirect without losing body
+    var form = new FormData();
+    form.append('name', name);
+    form.append('email', email);
+    form.append('company', company || '');
+    form.append('service', service);
+    form.append('budget', budget || '');
+    form.append('message', message);
 
-    // Google Apps Script requires no-cors mode due to redirect behaviour
     fetch(ENDPOINT, {
       method: 'POST',
       mode: 'no-cors',
-      headers: {'Content-Type': 'application/json'},
-      body: payload
+      body: form
     })
     .then(function(){
       window.location.href = 'thank-you.html';
     })
     .catch(function(){
-      // Even on network error show success — Apps Script may have already processed it
       window.location.href = 'thank-you.html';
     });
   });
