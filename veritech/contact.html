@@ -1384,26 +1384,42 @@ document.querySelectorAll('.stack-tab').forEach(tab => {
     btn.disabled = true;
     btn.innerHTML = '<i class="ti ti-loader" style="animation:spin .8s linear infinite"></i> Sending...';
 
-    // Use FormData + URLSearchParams — survives Google's redirect without losing body
-    var form = new FormData();
-    form.append('name', name);
-    form.append('email', email);
-    form.append('company', company || '');
-    form.append('service', service);
-    form.append('budget', budget || '');
-    form.append('message', message);
+    // Hidden form submit — most reliable method for Google Apps Script
+    // Bypasses CORS entirely, no body loss on redirect
+    var iframe = document.createElement('iframe');
+    iframe.name = 'submit-frame';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
 
-    fetch(ENDPOINT, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: form
-    })
-    .then(function(){
-      window.location.href = 'thank-you.html';
-    })
-    .catch(function(){
-      window.location.href = 'thank-you.html';
+    var hiddenForm = document.createElement('form');
+    hiddenForm.method = 'POST';
+    hiddenForm.action = ENDPOINT;
+    hiddenForm.target = 'submit-frame';
+
+    var fields = {
+      name: name,
+      email: email,
+      company: company || '',
+      service: service,
+      budget: budget || '',
+      message: message
+    };
+
+    Object.keys(fields).forEach(function(key){
+      var input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = fields[key];
+      hiddenForm.appendChild(input);
     });
+
+    document.body.appendChild(hiddenForm);
+    hiddenForm.submit();
+
+    // Redirect after short delay to allow submission to complete
+    setTimeout(function(){
+      window.location.href = 'thank-you.html';
+    }, 1000);
   });
 })();
 
