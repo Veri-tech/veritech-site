@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Data & Analytics | Veritech</title>
-<meta name="description" content="GA4 setup, Looker Studio dashboards, data pipeline integration, attribution modelling and BI reporting. Turn raw data into decisions that drive revenue.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.veritechdigital.co.za/services/data.html">
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Data & Analytics | Veritech">
-<meta property="og:description" content="GA4 setup, Looker Studio dashboards, data pipeline integration, attribution modelling and BI reporting. Turn raw data into decisions that drive revenue.">
-<meta property="og:url" content="https://www.veritechdigital.co.za/services/data.html">
-<meta property="og:site_name" content="Veritech">
-<meta property="og:locale" content="en_ZA">
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Data & Analytics | Veritech">
-<meta name="twitter:description" content="GA4 setup, Looker Studio dashboards, data pipeline integration, attribution modelling and BI reporting. Turn raw data into decisions that drive revenue.">
-<!-- Schema.org -->
-<script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Service",
-    "name":"Data & Analytics",
-    "provider":{"@type":"Organization","name":"Veritech","url":"https://veritech.co.za"},
-    "description":"GA4 setup, Looker Studio dashboards, data pipeline integration, attribution modelling and BI reporting. Turn raw data into decisions that drive revenue.",
-    "areaServed":{"@type":"Place","name":"Johannesburg, South Africa"},
-    "url":"https://www.veritechdigital.co.za/services/data.html"
-  }
-</script>
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="shortcut icon" href="../favicon.svg">
+<title>SEO & Search | Veritech Blog</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<meta name="description" content="Google Ads, Meta, LinkedIn and TikTok articles and insights from the Veritech team. Paid media strategy, campaign management, ROAS optimisation and attribution.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.veritechdigital.co.za/blog-paid-media.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paid Media | Veritech Blog">
+<meta property="og:description" content="Google Ads, Meta, LinkedIn and TikTok — campaign strategy, ROAS optimisation, attribution and paid media intelligence. Articles coming soon from the Veritech team.">
+<meta property="og:url" content="https://www.veritechdigital.co.za/blog-paid-media.html">
+<meta property="og:site_name" content="Veritech">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paid Media | Veritech Blog">
+<meta name="twitter:description" content="Google Ads, Meta, LinkedIn and TikTok — campaign strategy, ROAS optimisation, attribution and paid media intelligence. Articles coming soon from the Veritech team.">
+<script type="application/ld+json">
+  {
+  "@context":"https://schema.org",
+  "@type":"CollectionPage",
+  "name":"Paid Media | Veritech Blog",
+  "url":"https://www.veritechdigital.co.za/blog-paid-media.html",
+  "description":"Google Ads, Meta, LinkedIn and TikTok — campaign strategy, ROAS optimisation, attribution and paid media intelligence.",
+  "isPartOf":{"@type":"Blog","name":"Veritech Blog","url":"https://www.veritechdigital.co.za/blog.html"},
+  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://veritech.co.za"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.veritechdigital.co.za/blog.html"},
+    {"@type":"ListItem","position":3,"name":"SEO & Search","item":"https://www.veritechdigital.co.za/blog-seo.html"}
+  ]}
+}
+</script>
 <style>
 
 :root{
@@ -569,62 +569,68 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 
 /* 10. Page load — body opacity handled in JS */
 
-.svc-hero{position:relative;}
-.svc-hero #neural-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;width:100%;height:100%;}
-.svc-hero #hero-spotlight{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;transition:opacity .4s;}
-.svc-hero .container{position:relative;z-index:2;}
-.page-hero{position:relative;}
-.page-hero #neural-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;width:100%;height:100%;}
-.page-hero #hero-spotlight{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;transition:opacity .4s;}
-.page-hero .container{position:relative;z-index:2;}
+.blog-hero{position:relative;overflow:hidden;}
+.blog-hero #neural-canvas{position:absolute;inset:0;z-index:1;pointer-events:none;width:100%;height:100%;}
+.blog-hero #hero-spotlight{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;transition:opacity .4s;}
+.blog-hero .container{position:relative;z-index:2;}
 
 
-.svc-hero{min-height:72vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;}
-.svc-hero-inner{max-width:760px;position:relative;z-index:2;}
-.back-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:32px;transition:color .2s;}
-.back-link:hover{color:var(--white);}
-.svc-hero h1{font-family:var(--sans);font-weight:800;font-size:clamp(42px,6vw,80px);letter-spacing:-.04em;line-height:1;color:var(--white);margin-bottom:24px;}
-.svc-hero h1 .accent{color:var(--indigo);}
-.svc-hero p{font-family:var(--sans);font-size:clamp(16px,1.6vw,19px);color:var(--muted);line-height:1.75;margin-bottom:40px;max-width:580px;}
-.svc-hero-stats{display:flex;gap:40px;flex-wrap:wrap;padding-top:40px;border-top:1px solid var(--border);}
-.svc-stat-num{font-family:var(--sans);font-weight:800;font-size:32px;color:var(--white);letter-spacing:-.04em;line-height:1;}
-.svc-stat-num em{color:var(--indigo);font-style:normal;}
-.svc-stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-top:5px;}
-.svc-hero-bg{position:absolute;right:0;top:50%;transform:translateY(-50%);width:45%;opacity:.04;font-family:var(--sans);font-weight:800;font-size:clamp(100px,16vw,220px);color:var(--indigo);display:flex;align-items:center;justify-content:flex-end;padding-right:4%;line-height:1;letter-spacing:-.05em;user-select:none;pointer-events:none;}
-.features-section{padding:96px 0;}.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px;}
-.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 28px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s;background-image:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(108,99,255,.07),transparent 60%);}
-.feature-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--indigo),transparent);opacity:0;transition:opacity .3s;}
-.feature-card:hover{border-color:var(--indigo-border);transform:translateY(-3px);}.feature-card:hover::after{opacity:1;}
-.feat-icon{width:44px;height:44px;background:var(--indigo-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--indigo);font-size:20px;margin-bottom:18px;transition:transform .3s,background .2s;}
-.feature-card:hover .feat-icon{transform:scale(1.1) rotate(-5deg);background:rgba(108,99,255,.2);}
-.feat-title{font-family:var(--sans);font-weight:700;font-size:17px;letter-spacing:-.02em;color:var(--white);margin-bottom:10px;}
-.feat-desc{font-family:var(--sans);font-size:14px;color:var(--muted);line-height:1.75;}
-.process-section{padding:96px 0;background:var(--depth);}.process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-.proc-step{padding:32px 24px;border-right:1px solid var(--border);position:relative;transition:border-color .2s,background .2s;}.proc-step:last-child{border-right:none;}.proc-step:hover{background:rgba(108,99,255,.03);}
-.proc-dot{width:10px;height:10px;background:var(--depth);border:2px solid var(--indigo);border-radius:50%;margin-bottom:20px;position:relative;}
-.proc-dot::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(108,99,255,.2);animation:ripple 2.5s infinite;}
-@keyframes ripple{0%{transform:scale(1);opacity:1;}100%{transform:scale(2);opacity:0;}}
-.proc-num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--indigo);margin-bottom:14px;}
-.proc-title{font-family:var(--sans);font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--white);margin-bottom:10px;}
-.proc-desc{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.7;}
-.tools-section{padding:80px 0;border-top:1px solid var(--border);}.tools-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;}
-.tool-pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--white);padding:8px 18px;border-radius:100px;border:1px solid var(--border);background:var(--surface);transition:border-color .2s,background .2s,transform .15s;}
-.tool-pill:hover{border-color:var(--indigo);background:var(--indigo-dim);transform:translateY(-2px);}
-.outcomes-section{padding:96px 0;}.outcomes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px;}
-.outcome-card{background:var(--depth);border:1px solid var(--border);border-radius:14px;padding:32px 28px;transition:border-color .2s,transform .2s;}.outcome-card:hover{border-color:var(--indigo-border);transform:translateY(-3px);}
-.outcome-num{font-family:var(--sans);font-weight:800;font-size:40px;letter-spacing:-.04em;color:var(--indigo);line-height:1;margin-bottom:8px;}
-.outcome-title{font-family:var(--sans);font-weight:700;font-size:16px;color:var(--white);margin-bottom:8px;}
-.outcome-desc{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.7;}
-.related-section{padding:80px 0;background:var(--depth);}.related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px;}
-.related-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px 22px;transition:border-color .25s,transform .2s;display:block;}
-.related-card:hover{border-color:var(--indigo-border);transform:translateY(-3px);}
-.related-icon{color:var(--indigo);font-size:22px;margin-bottom:14px;}
-.related-title{font-family:var(--sans);font-weight:700;font-size:15px;color:var(--white);margin-bottom:6px;}
-.related-desc{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.6;}
-.related-arrow{font-family:var(--mono);font-size:10px;color:var(--indigo);margin-top:14px;display:block;}
-@media(max-width:1024px){.features-grid{grid-template-columns:repeat(2,1fr);}.related-grid{grid-template-columns:repeat(2,1fr);}.outcomes-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:768px){.svc-hero{min-height:auto;padding:100px 0 60px;}.features-grid,.outcomes-grid{grid-template-columns:1fr;}.process-row{grid-template-columns:1fr 1fr;}.proc-step{border-right:none;border-bottom:1px solid var(--border);padding:24px 20px;}.proc-step:last-child{border-bottom:none;}.related-grid{grid-template-columns:1fr 1fr;}.svc-hero-stats{gap:20px;}}
-@media(max-width:480px){.process-row{grid-template-columns:1fr;}.related-grid{grid-template-columns:1fr;}}
+.blog-hero{min-height:55vh;display:flex;align-items:center;padding:120px 0 72px;}
+.blog-hero-bg{position:absolute;right:-5%;top:50%;transform:translateY(-50%);font-family:var(--sans);font-weight:800;font-size:clamp(120px,18vw,240px);color:var(--indigo);opacity:.03;letter-spacing:-.06em;pointer-events:none;user-select:none;line-height:1;}
+.blog-hero h1{font-family:var(--sans);font-weight:800;font-size:clamp(44px,6vw,80px);letter-spacing:-.04em;line-height:1;color:var(--white);margin-bottom:18px;}
+.blog-hero p{font-family:var(--sans);font-size:clamp(16px,1.6vw,18px);color:var(--muted);line-height:1.75;max-width:540px;}
+
+/* Category nav */
+.blog-section{padding:72px 0 96px;}
+.cat-nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:52px;}
+.cat-nav-item{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:8px 18px;border-radius:100px;border:1px solid var(--border);background:transparent;cursor:pointer;text-decoration:none;transition:color .2s,border-color .2s,background .2s;}
+.cat-nav-item:hover{color:var(--white);border-color:rgba(108,99,255,.4);}
+.cat-nav-item.active{color:var(--white);border-color:var(--indigo);background:var(--indigo-dim);}
+.cat-nav-item .cat-count{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 4px;border-radius:100px;background:var(--indigo-dim);color:var(--indigo);font-size:9px;margin-left:4px;}
+
+/* Empty state */
+.empty-state{text-align:center;padding:80px 40px;background:var(--depth);border:1px solid var(--border);border-radius:16px;max-width:640px;margin:0 auto;}
+.empty-icon{width:72px;height:72px;background:var(--indigo-dim);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--indigo);font-size:32px;margin:0 auto 24px;}
+.empty-title{font-family:var(--sans);font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--white);margin-bottom:12px;}
+.empty-desc{font-family:var(--sans);font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:32px;}
+
+/* Notify form */
+.notify-form{display:flex;gap:10px;max-width:420px;margin:0 auto;}
+.notify-input{flex:1;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:11px 16px;font-family:var(--sans);font-size:14px;color:var(--white);outline:none;transition:border-color .2s;}
+.notify-input::placeholder{color:var(--muted);}
+.notify-input:focus{border-color:var(--indigo);}
+.notify-btn{font-family:var(--sans);font-weight:700;font-size:13px;color:#fff;background:var(--indigo);padding:11px 22px;border-radius:8px;border:none;cursor:pointer;white-space:nowrap;transition:background .2s,transform .15s;}
+.notify-btn:hover{background:#7B74FF;transform:translateY(-1px);}
+
+/* Coming soon category cards */
+.cat-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:64px;}
+.cat-preview-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 24px;text-decoration:none;transition:border-color .25s,transform .2s;display:block;}
+.cat-preview-card:hover{border-color:var(--indigo-border);transform:translateY(-3px);}
+.cat-preview-card::after{content:'';display:block;position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--indigo),transparent);opacity:0;transition:opacity .3s;border-radius:14px 14px 0 0;}
+.cat-preview-card{position:relative;overflow:hidden;}
+.cat-preview-card:hover::after{opacity:1;}
+.cat-icon{width:40px;height:40px;background:var(--indigo-dim);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--indigo);font-size:18px;margin-bottom:16px;transition:transform .3s;}
+.cat-preview-card:hover .cat-icon{transform:scale(1.1) rotate(-5deg);}
+.cat-name{font-family:var(--sans);font-weight:700;font-size:16px;color:var(--white);margin-bottom:6px;}
+.cat-desc{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px;}
+.cat-soon{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo);display:flex;align-items:center;gap:6px;}
+.cat-soon::before{content:'';width:6px;height:6px;background:var(--indigo);border-radius:50%;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(108,99,255,.5);}50%{box-shadow:0 0 0 6px rgba(108,99,255,0);}}
+
+/* Breadcrumb */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:32px;flex-wrap:wrap;}
+.breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s;}
+.breadcrumb a:hover{color:var(--white);}
+.breadcrumb i{font-size:10px;opacity:.5;}
+.breadcrumb span{color:var(--white);}
+
+@media(max-width:768px){
+  .cat-preview-grid{grid-template-columns:1fr;}
+  .notify-form{flex-direction:column;}
+  .cat-nav{gap:6px;}
+  .cat-nav-item{font-size:9px;padding:7px 14px;}
+}
+@media(max-width:1024px){.cat-preview-grid{grid-template-columns:repeat(2,1fr);}}
 
 
 /* ── Services dropdown ── */
@@ -813,107 +819,175 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
     Services <i class="ti ti-chevron-down" aria-hidden="true"></i>
   </button>
   <div class="mob-services-group" id="mob-services-group" role="region">
-    <a href="../services/web-development.html" class="mob-sub-link"><i class="ti ti-code" aria-hidden="true"></i>Web Development</a>
-    <a href="../services/seo.html" class="mob-sub-link"><i class="ti ti-search" aria-hidden="true"></i>SEO</a>
-    <a href="../services/paid-media.html" class="mob-sub-link"><i class="ti ti-speakerphone" aria-hidden="true"></i>Paid Media</a>
-    <a href="../services/ai-automations.html" class="mob-sub-link"><i class="ti ti-brain" aria-hidden="true"></i>AI Automations</a>
-    <a href="../services/cro.html" class="mob-sub-link"><i class="ti ti-chart-line" aria-hidden="true"></i>CRO</a>
-    <a href="../services/data.html" class="mob-sub-link"><i class="ti ti-database" aria-hidden="true"></i>Data &amp; Analytics</a>
-    <a href="../services/ux-ui.html" class="mob-sub-link"><i class="ti ti-palette" aria-hidden="true"></i>UX / UI Design</a>
+    <a href="services/web-development.html" class="mob-sub-link"><i class="ti ti-code" aria-hidden="true"></i>Web Development</a>
+    <a href="services/seo.html" class="mob-sub-link"><i class="ti ti-search" aria-hidden="true"></i>SEO</a>
+    <a href="services/paid-media.html" class="mob-sub-link"><i class="ti ti-speakerphone" aria-hidden="true"></i>Paid Media</a>
+    <a href="services/ai-automations.html" class="mob-sub-link"><i class="ti ti-brain" aria-hidden="true"></i>AI Automations</a>
+    <a href="services/cro.html" class="mob-sub-link"><i class="ti ti-chart-line" aria-hidden="true"></i>CRO</a>
+    <a href="services/data.html" class="mob-sub-link"><i class="ti ti-database" aria-hidden="true"></i>Data &amp; Analytics</a>
+    <a href="services/ux-ui.html" class="mob-sub-link"><i class="ti ti-palette" aria-hidden="true"></i>UX / UI Design</a>
   </div>
-  <a href="../about.html" class="mob-link">About</a>
-  <a href="../process.html" class="mob-link">Process</a>
-  <a href="../blog.html" class="mob-link">Blog</a>
-  <a href="../contact.html" class="mob-link">Contact</a>
+  <a href="about.html" class="mob-link">About</a>
+  <a href="process.html" class="mob-link">Process</a>
+  <a href="blog.html" class="mob-link">Blog</a>
+  <a href="contact.html" class="mob-link">Contact</a>
   <div class="mob-divider"></div>
-  <a href="../contact.html" class="btn-primary">Book a call &rarr;</a>
+  <a href="contact.html" class="btn-primary">Book a call &rarr;</a>
 </div>
 <nav id="main-nav">
   <div class="container nav-inner">
-    <a href="../index.html" class="nav-logo"><div class="vt-mark">VT</div><span class="nav-brand">Veritech</span></a>
+    <a href="index.html" class="nav-logo"><div class="vt-mark">VT</div><span class="nav-brand">Veritech</span></a>
     <ul class="nav-links"><div id="nav-pill"></div>
       <li class="nav-has-dropdown">
-        <a href="../index.html#services" class="nav-dropdown-trigger">Services <i class="ti ti-chevron-down nav-chevron" aria-hidden="true"></i></a>
+        <a href="index.html#services" class="nav-dropdown-trigger">Services <i class="ti ti-chevron-down nav-chevron" aria-hidden="true"></i></a>
         <div class="nav-dropdown">
-          <a href="../services/web-development.html" class="nav-drop-item"><i class="ti ti-code" aria-hidden="true"></i><span>Web Development</span></a>
-          <a href="../services/seo.html" class="nav-drop-item"><i class="ti ti-search" aria-hidden="true"></i><span>SEO</span></a>
-          <a href="../services/paid-media.html" class="nav-drop-item"><i class="ti ti-speakerphone" aria-hidden="true"></i><span>Paid Media</span></a>
-          <a href="../services/ai-automations.html" class="nav-drop-item"><i class="ti ti-brain" aria-hidden="true"></i><span>AI Automations</span></a>
-          <a href="../services/cro.html" class="nav-drop-item"><i class="ti ti-chart-line" aria-hidden="true"></i><span>CRO</span></a>
-          <a href="../services/data.html" class="nav-drop-item"><i class="ti ti-database" aria-hidden="true"></i><span>Data &amp; Analytics</span></a>
-          <a href="../services/ux-ui.html" class="nav-drop-item"><i class="ti ti-palette" aria-hidden="true"></i><span>UX / UI Design</span></a>
+          <a href="services/web-development.html" class="nav-drop-item"><i class="ti ti-code" aria-hidden="true"></i><span>Web Development</span></a>
+          <a href="services/seo.html" class="nav-drop-item"><i class="ti ti-search" aria-hidden="true"></i><span>SEO</span></a>
+          <a href="services/paid-media.html" class="nav-drop-item"><i class="ti ti-speakerphone" aria-hidden="true"></i><span>Paid Media</span></a>
+          <a href="services/ai-automations.html" class="nav-drop-item"><i class="ti ti-brain" aria-hidden="true"></i><span>AI Automations</span></a>
+          <a href="services/cro.html" class="nav-drop-item"><i class="ti ti-chart-line" aria-hidden="true"></i><span>CRO</span></a>
+          <a href="services/data.html" class="nav-drop-item"><i class="ti ti-database" aria-hidden="true"></i><span>Data &amp; Analytics</span></a>
+          <a href="services/ux-ui.html" class="nav-drop-item"><i class="ti ti-palette" aria-hidden="true"></i><span>UX / UI Design</span></a>
         </div>
       </li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../process.html">Process</a></li>
-      <li><a href="../blog.html">Blog</a></li>
-      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="process.html">Process</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-    <a href="../contact.html" class="btn-primary nav-cta magnetic">Book a call</a>
+    <a href="contact.html" class="btn-primary nav-cta magnetic">Book a call</a>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<section class="svc-hero"><canvas id="neural-canvas" aria-hidden="true"></canvas>
-  <div id="hero-spotlight" aria-hidden="true"></div><div class="svc-hero-bg">DATA</div>
-<div class="container"><div class="svc-hero-inner"><a href="../index.html#services" class="back-link"><i class="ti ti-arrow-left" aria-hidden="true"></i> All services</a>
-<div class="tag">05 — Data & Analytics</div>
-<h1>Turn numbers into<br><span class="accent">decisions.</span></h1>
-<p>We connect, clean, visualise, and interpret your data — giving you a single source of truth across every channel. Stop guessing. Start knowing.</p>
-<div class="hero-ctas reveal"><a href="../contact.html" class="btn-primary magnetic">Start a data project →</a><a href="#features" class="btn-ghost">What's included</a></div>
-<div class="svc-hero-stats"><div><div class="svc-stat-num">83<em>%</em></div><div class="svc-stat-label">Data teams outperform</div></div><div><div class="svc-stat-num">40<em>%</em></div><div class="svc-stat-label">Faster decisions with BI</div></div><div><div class="svc-stat-num">2<em>hrs</em></div><div class="svc-stat-label">Avg daily reporting saved</div></div></div>
-</div></div></section>
-<section class="features-section" id="features" style="background:var(--depth);"><div class="container">
-<div class="reveal"><div class="tag">What's included</div><h2 class="section-h2">Everything from raw data<br>to real intelligence.</h2></div>
-<div class="features-grid">
-<div class="feature-card reveal"><div class="feat-icon"><i class="ti ti-brand-google-analytics"></i></div><div class="feat-title">Analytics Setup & Tracking</div><p class="feat-desc">GA4 implementation, GTM setup, custom event tracking, conversion goals, and e-commerce tracking. Make sure every meaningful action on your site is captured accurately — no data leakage.</p></div>
-<div class="feature-card reveal" style="transition-delay:.07s"><div class="feat-icon"><i class="ti ti-layout-dashboard"></i></div><div class="feat-title">Custom Dashboard Development</div><p class="feat-desc">Looker Studio, Power BI, or Tableau dashboards built around your KPIs — not generic templates. Real-time visibility into traffic, leads, revenue, and performance.</p></div>
-<div class="feature-card reveal" style="transition-delay:.14s"><div class="feat-icon"><i class="ti ti-git-merge"></i></div><div class="feat-title">Data Integration & Pipelines</div><p class="feat-desc">Connect your CRM, paid ads, website analytics, email, and social into a single clean data stream. One view of the full picture — no more switching between tabs.</p></div>
-<div class="feature-card reveal" style="transition-delay:.21s"><div class="feat-icon"><i class="ti ti-report-analytics"></i></div><div class="feat-title">BI Reporting & Insights</div><p class="feat-desc">Regular business intelligence reports that go beyond numbers. Identify trends, flag anomalies, surface opportunities, and deliver executive-ready summaries that drive action.</p></div>
-<div class="feature-card reveal" style="transition-delay:.28s"><div class="feat-icon"><i class="ti ti-route"></i></div><div class="feat-title">Attribution Modelling</div><p class="feat-desc">Understand which channels, campaigns, and touchpoints are actually driving revenue — not just last-click credit. Multi-touch attribution so you spend budget where it counts.</p></div>
-<div class="feature-card reveal" style="transition-delay:.35s"><div class="feat-icon"><i class="ti ti-chart-dots"></i></div><div class="feat-title">Predictive Analytics</div><p class="feat-desc">Use historical data and AI models to forecast traffic, leads, and revenue. Plan campaigns and budgets with confidence — know what's coming, not just what happened.</p></div>
-</div></div></section>
-<section class="process-section"><div class="container">
-<div class="reveal" style="max-width:540px;margin-bottom:52px;"><div class="tag">Our approach</div><h2 class="section-h2">From messy data<br>to clear intelligence.</h2></div>
-<div class="process-row">
-<div class="proc-step reveal"><div class="proc-dot"></div><div class="proc-num">Step 01</div><div class="proc-title">Audit</div><p class="proc-desc">Audit current tracking, data sources, and reporting setup. Identify gaps, duplicate tracking, broken events. Map every data point that matters to your business.</p></div>
-<div class="proc-step reveal" style="transition-delay:.08s"><div class="proc-dot"></div><div class="proc-num">Step 02</div><div class="proc-title">Connect</div><p class="proc-desc">Integrate data sources — GA4, CRM, ads, social, email — into clean, automated pipelines. One source of truth, always current, zero manual pulling.</p></div>
-<div class="proc-step reveal" style="transition-delay:.16s"><div class="proc-dot"></div><div class="proc-num">Step 03</div><div class="proc-title">Visualise</div><p class="proc-desc">Dashboards tailored to how your team makes decisions. Executives see revenue. Marketers see channel performance. Developers see technical KPIs.</p></div>
-<div class="proc-step reveal" style="transition-delay:.24s"><div class="proc-dot"></div><div class="proc-num">Step 04</div><div class="proc-title">Interpret</div><p class="proc-desc">Monthly strategy reviews with recommendations tied directly to business outcomes. Your data translates into a clear action plan — not just a report.</p></div>
-</div></div></section>
-<section class="tools-section"><div class="container"><div class="reveal"><div class="tag">Data stack</div><h2 class="section-h2">The platforms we use.</h2></div>
-<div class="tools-grid reveal" style="transition-delay:.1s"><span class="tool-pill">Google Analytics 4</span><span class="tool-pill">Google Tag Manager</span><span class="tool-pill">Looker Studio</span><span class="tool-pill">Power BI</span><span class="tool-pill">Tableau</span><span class="tool-pill">BigQuery</span><span class="tool-pill">Supermetrics</span><span class="tool-pill">Search Console</span><span class="tool-pill">Hotjar</span><span class="tool-pill">Python</span><span class="tool-pill">SQL</span><span class="tool-pill">Zoho Analytics</span></div>
-</div></section>
-<section class="outcomes-section" style="background:var(--depth);"><div class="container"><div class="reveal"><div class="tag">What you get</div><h2 class="section-h2">Results, not reports.</h2></div>
-<div class="outcomes-grid"><div class="outcome-card reveal"><div class="outcome-num">01</div><div class="outcome-title">Single source of truth</div><p class="outcome-desc">All your data — website, ads, CRM, social — in one place. No more conflicting numbers. One dashboard everyone trusts.</p></div>
-<div class="outcome-card reveal" style="transition-delay:.1s"><div class="outcome-num">02</div><div class="outcome-title">Data-backed decisions</div><p class="outcome-desc">Every marketing, product, and operational decision made with confidence. You know what's working, what's not, and where to invest next.</p></div>
-<div class="outcome-card reveal" style="transition-delay:.2s"><div class="outcome-num">03</div><div class="outcome-title">Early warning system</div><p class="outcome-desc">Anomaly detection flags drops in traffic, leads, or revenue before they become problems — giving you time to act, not react.</p></div>
-</div></div></section>
-<section class="related-section"><div class="container"><div class="reveal"><div class="tag">Also consider</div><h2 class="section-h2">Services that work together.</h2></div><div class="related-grid"><a href="cro.html" class="related-card reveal"><i class="ti ti-chart-line related-icon" aria-hidden="true"></i><div class="related-title">CRO</div><p class="related-desc">Use data insights to run targeted A/B tests and optimise conversion funnels with evidence.</p><span class="related-arrow">View service →</span></a><a href="seo.html" class="related-card reveal"><i class="ti ti-search related-icon" aria-hidden="true"></i><div class="related-title">SEO</div><p class="related-desc">Full attribution so you know exactly which keywords and pages are driving leads and revenue.</p><span class="related-arrow">View service →</span></a><a href="ai-automations.html" class="related-card reveal"><i class="ti ti-settings-automation related-icon" aria-hidden="true"></i><div class="related-title">AI Automations</div><p class="related-desc">Automate data pipelines and reporting — insights appear without any manual work.</p><span class="related-arrow">View service →</span></a><a href="web-development.html" class="related-card reveal"><i class="ti ti-code related-icon" aria-hidden="true"></i><div class="related-title">Web Development</div><p class="related-desc">Tracking-ready builds with clean data layer implementation from day one.</p><span class="related-arrow">View service →</span></a></div></div></section><section class="cta-band"><div class="cta-grid-bg"></div><div class="cta-orb cta-orb-1"></div><div class="cta-orb cta-orb-2"></div><div class="container cta-inner reveal"><h2 class="cta-h2">Ready to make your data work for you?</h2><p class="cta-sub">Tell us about your project. We'll come back with a clear plan.</p><a href="../contact.html" class="btn-cta magnetic">Get in touch →</a></div></section><footer id="contact">
+
+<section class="blog-hero">
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
+  <div id="hero-spotlight" aria-hidden="true"></div>
+  <div class="blog-hero-bg">ADS</div>
+  <div class="container">
+    <div class="reveal">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <a href="blog.html">Blog</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <span>SEO & Search</span>
+      </nav>
+      <div class="tag">SEO & Search</div>
+      <h1>SEO & Search<br><span class="accent">insights.</span></h1>
+      <p>Google Ads, Meta, LinkedIn and TikTok — campaign strategy, ROAS optimisation, attribution and paid media intelligence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="container">
+    <nav class="cat-nav" aria-label="Blog categories">
+  <a href="blog.html" class="cat-nav-item" data-cat="all">All posts <span class="cat-count">0</span></a>
+  <a href="blog-web-development.html" class="cat-nav-item" data-cat="web-development">Web Development <span class="cat-count">0</span></a>
+  <a href="blog-seo.html" class="cat-nav-item" data-cat="seo">SEO & Search <span class="cat-count">0</span></a>
+  <a href="blog-ai-automation.html" class="cat-nav-item" data-cat="ai-automation">AI & Automation <span class="cat-count">0</span></a>
+  <a href="blog-cro.html" class="cat-nav-item" data-cat="cro">CRO <span class="cat-count">0</span></a>
+  <a href="blog-data-analytics.html" class="cat-nav-item" data-cat="data-analytics">Data & Analytics <span class="cat-count">0</span></a>
+  <a href="blog-design.html" class="cat-nav-item" data-cat="design">Design & UX <span class="cat-count">0</span></a>
+  <a href="blog-paid-media.html" class="cat-nav-item active" data-cat="paid-media">Paid Media <span class="cat-count">0</span></a>
+  <a href="blog-agency-insights.html" class="cat-nav-item" data-cat="agency-insights">Agency Insights <span class="cat-count">0</span></a>
+</nav>
+    <div class="empty-state reveal">
+      <div class="empty-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+      <div class="empty-title">SEO & Search articles coming soon.</div>
+      <p class="empty-desc">We're working on in-depth articles covering seo & search — the kind that are actually useful, not just keyword-stuffed. Drop your email and we'll let you know when they go live.</p>
+      <div class="notify-form">
+        <input class="notify-input" id="notify-email" type="email" placeholder="your@email.com" autocomplete="email">
+        <button class="notify-btn" id="notify-btn" type="button">Notify me</button>
+      </div>
+    </div>
+
+    <div style="margin-top:64px;">
+      <div class="reveal"><div class="tag">Other categories</div><h2 class="section-h2" style="margin-bottom:0;">Explore more topics.</h2></div>
+    </div>
+    <div class="cat-preview-grid"><a href="blog-web-development.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
+      <div class="cat-name">Web Development</div>
+      <p class="cat-desc">Deep dives into WordPress, WooCommerce, performance, APIs and modern web architecture.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-seo.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-search" aria-hidden="true"></i></div>
+      <div class="cat-name">SEO & Search</div>
+      <p class="cat-desc">Google Ads, Meta, LinkedIn and TikTok — campaign strategy, ROAS optimisation, attribution and paid media intelligence.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-ai-automation.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-brain" aria-hidden="true"></i></div>
+      <div class="cat-name">AI & Automation</div>
+      <p class="cat-desc">Workflow automation, AI agent building, prompt engineering and the future of intelligent systems.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-cro.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+      <div class="cat-name">CRO</div>
+      <p class="cat-desc">Conversion rate optimisation, A/B testing, funnel analysis and user behaviour insights.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-data-analytics.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-database" aria-hidden="true"></i></div>
+      <div class="cat-name">Data & Analytics</div>
+      <p class="cat-desc">GA4, dashboards, attribution modelling, BI reporting and making data actually useful.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-design.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-palette" aria-hidden="true"></i></div>
+      <div class="cat-name">Design & UX</div>
+      <p class="cat-desc">UX research, UI design, design systems, accessibility and the craft of great interfaces.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-agency-insights.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+      <div class="cat-name">Agency Insights</div>
+      <p class="cat-desc">Behind the scenes at Veritech — strategy, tools, lessons and how we approach digital work.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a><a href="blog-paid-media.html" class="cat-preview-card reveal">
+      <div class="cat-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+      <div class="cat-name">Paid Media</div>
+      <p class="cat-desc">Google Ads, Meta, LinkedIn and TikTok — strategy, campaign management, attribution and ROAS optimisation across every major paid channel.</p>
+      <span class="cat-soon">Coming soon</span>
+    </a>
+</div>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-grid-bg"></div>
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <div class="container cta-inner reveal">
+    <h2 class="cta-h2">Want to talk seo & search now?</h2>
+    <p class="cta-sub">We build this stuff for a living. Let's talk about your project.</p>
+    <a href="contact.html" class="btn-cta magnetic">Get in touch →</a>
+  </div>
+</section>
+
+<footer id="contact">
   <div class="container">
     <div class="footer-top">
       <div class="footer-logo-wrap"><div class="footer-logo"><div class="vt-mark">VT</div><span class="footer-brand-name">Veritech</span></div><div class="footer-tagline">Intelligence. Built. Delivered.</div></div>
       <div class="footer-links">
         <div class="footer-col"><div class="footer-col-title">Services</div><ul>
-          <li><a href="web-development.html">Web Development</a></li>
-          <li><a href="seo.html">SEO</a></li>
-          <li><a href="ai-automations.html">AI Automations</a></li>
-          <li><a href="cro.html">CRO</a></li>
-          <li><a href="data.html">Data & Analytics</a></li>
-          <li><a href="paid-media.html">Paid Media</a></li>
-          <li><a href="ux-ui.html">UX / UI Design</a></li>
+          <li><a href="services/web-development.html">Web Development</a></li>
+          <li><a href="services/seo.html">SEO</a></li>
+          <li><a href="services/ai-automations.html">AI Automations</a></li>
+          <li><a href="services/cro.html">CRO</a></li>
+          <li><a href="services/data.html">Data & Analytics</a></li>
+          <li><a href="services/paid-media.html">Paid Media</a></li>
+          <li><a href="services/ux-ui.html">UX / UI Design</a></li>
         </ul></div>
-        <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="../about.html">About</a></li><li><a href="../process.html">Process</a></li><li><a href="#">Case Studies</a></li><li><a href="../blog.html">Blog</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-          <li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="about.html">About</a></li><li><a href="process.html">Process</a></li><li><a href="#">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li></ul></div>
         <div class="footer-col"><div class="footer-col-title">Get in touch</div><ul><li><a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a></li><li><a href="#">Johannesburg, SA</a></li></ul></div>
       </div>
     </div>
     <div class="footer-bottom">
-    <span>&copy; 2026 Veritech Digital. All rights reserved. &nbsp;&middot;&nbsp; <a href="../privacy.html">Privacy Policy</a></span>
+    <span>&copy; 2026 Veritech Digital. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a></span>
     <span>Built by Veritech</span>
   </div>
   </div>
-</footer>
+
 <script>
 (function(){
   const canvas=document.getElementById('neural-canvas');
@@ -923,7 +997,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
   function init(){particles=[];const n=Math.min(Math.floor(W*H/(isTouch?18000:11000)),isTouch?40:70);
     for(let i=0;i<n;i++)particles.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.4+.8});}
-  if(!isTouch)var heroSec=document.querySelector('.page-hero,#hero,.svc-hero');if(heroSec)heroSec.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+  if(!isTouch)var _bh=document.querySelector('.blog-hero');if(_bh)_bh.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
   function draw(){
     ctx.clearRect(0,0,W,H);
     const maxD=isTouch?110:130;
@@ -1251,21 +1325,22 @@ document.querySelectorAll('.stack-tab').forEach(tab => {
   // Fallback in case load already fired
   setTimeout(function(){ document.body.style.opacity = '1'; }, 600);
 })();
+(function(){var h=document.querySelector('.blog-hero');if(!h)return;var sp=document.getElementById('hero-spotlight');if(!sp)return;h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();sp.style.background='radial-gradient(600px circle at '+(e.clientX-r.left)+'px '+(e.clientY-r.top)+'px,rgba(108,99,255,0.09),transparent 70%)';sp.style.opacity='1';});h.addEventListener('mouseleave',function(){sp.style.opacity='0';});})();
 
 (function(){
-  var hero = document.querySelector('.page-hero, #hero, .svc-hero');
-  if(!hero) return;
-  var spotlight = document.getElementById('hero-spotlight');
-  if(!spotlight) return;
-  hero.addEventListener('mousemove', function(e){
-    var r = hero.getBoundingClientRect();
-    spotlight.style.background = 'radial-gradient(600px circle at ' + (e.clientX-r.left) + 'px ' + (e.clientY-r.top) + 'px, rgba(108,99,255,0.09), transparent 70%)';
-    spotlight.style.opacity = '1';
+  var btn = document.getElementById('notify-btn');
+  var inp = document.getElementById('notify-email');
+  if(!btn||!inp) return;
+  btn.addEventListener('click', function(){
+    var email = inp.value.trim();
+    if(!email || !email.includes('@')){ inp.style.borderColor='rgba(239,68,68,0.7)'; setTimeout(function(){inp.style.borderColor='';},2000); return; }
+    btn.textContent = 'Done! We\'ll be in touch.';
+    btn.style.background = '#22C55E';
+    btn.disabled = true;
+    inp.disabled = true;
   });
-  hero.addEventListener('mouseleave', function(){ spotlight.style.opacity = '0'; });
 })();
 
-document.querySelectorAll(".feature-card").forEach(function(card){card.addEventListener("mousemove",function(e){var r=card.getBoundingClientRect();card.style.setProperty("--mx",(e.clientX-r.left)+"px");card.style.setProperty("--my",(e.clientY-r.top)+"px");});});
 
 // mob-services-accordion
 

@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Veritech | Web Dev, SEO, UX/UI, Data & AI Agency — Johannesburg</title>
-<meta name="description" content="Veritech is a Johannesburg agency specialising in web development, SEO, UX/UI design, data analytics and AI automation. We build digital infrastructure that performs.">
+<meta name="description" content="Veritech is a Johannesburg agency specialising in web development, SEO, paid media, UX/UI design, data analytics and AI automation. We build digital infrastructure that performs.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.veritechdigital.co.za/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Veritech — Intelligence. Built. Delivered.">
-<meta property="og:description" content="Veritech is a Johannesburg agency specialising in web development, SEO, UX/UI design, data analytics and AI automation. We build digital infrastructure that performs.">
+<meta property="og:description" content="Veritech is a Johannesburg agency specialising in web development, SEO, paid media, UX/UI design, data analytics and AI automation. We build digital infrastructure that performs.">
 <meta property="og:url" content="https://www.veritechdigital.co.za/">
 <meta property="og:site_name" content="Veritech">
 <meta property="og:locale" content="en_ZA">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Veritech — Intelligence. Built. Delivered.">
-<meta name="twitter:description" content="Veritech is a Johannesburg agency specialising in web development, SEO, UX/UI design, data analytics and AI automation. We build digital infrastructure that performs.">
+<meta name="twitter:description" content="Veritech is a Johannesburg agency specialising in web development, SEO, paid media, UX/UI design, data analytics and AI automation. We build digital infrastructure that performs.">
 <!-- Schema.org -->
 <script type="application/ld+json">
   {
@@ -24,7 +24,7 @@
     "@type":"Organization",
     "name":"Veritech",
     "url":"https://veritech.co.za",
-    "description":"Veritech is a Johannesburg-based digital intelligence agency delivering web development, SEO, AI automations, CRO, data analytics and UX/UI design.",
+    "description":"Veritech is a Johannesburg-based digital intelligence agency delivering web development, SEO, paid media, AI automations, CRO, data analytics and UX/UI design.",
     "address":{"@type":"PostalAddress","addressLocality":"Johannesburg","addressCountry":"ZA"},
     "serviceType":["Web Development","SEO","AI Automations","CRO","Data Analytics","UX/UI Design"]
   }
@@ -287,14 +287,14 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 #services{padding:96px 0;background:var(--depth);}
 .services-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;gap:24px;}
 .services-header-right{font-family:var(--sans);font-size:15px;color:var(--muted);line-height:1.65;max-width:320px;text-align:right;align-self:flex-end;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;overflow:visible;}
+
 .svc-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 28px;position:relative;overflow:hidden;
   background-image:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(108,99,255,.07),transparent 60%);
   transition:border-color .25s,transform .25s;display:block;color:inherit;}
 .svc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--indigo),transparent);opacity:0;transition:opacity .3s;}
 .svc-card:hover{border-color:var(--indigo-border);transform:translateY(-4px);}
 .svc-card:hover::after{opacity:1;}
-.svc-card-featured{grid-column:span 2;}
+
 .svc-icon{width:44px;height:44px;background:var(--indigo-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--indigo);font-size:20px;margin-bottom:18px;transition:transform .3s,background .2s;}
 .svc-card:hover .svc-icon{transform:scale(1.1) rotate(-5deg);background:rgba(108,99,255,.2);}
 .svc-num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:rgba(108,99,255,.35);margin-bottom:8px;}
@@ -346,10 +346,10 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 .step-title{font-family:var(--sans);font-weight:800;font-size:clamp(18px,1.8vw,21px);letter-spacing:-.02em;color:var(--white);margin-bottom:12px;}
 .step-desc{font-family:var(--sans);font-size:14px;color:var(--muted);line-height:1.75;}
 /* ── RESPONSIVE ADDITIONS ── */
-@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr);}.svc-card-featured{grid-column:span 1;}}
+@media(max-width:1024px){}
 @media(max-width:768px){
   .services-header{flex-direction:column;align-items:flex-start;}.services-header-right{text-align:left;max-width:100%;}
-  .services-grid{grid-template-columns:1fr;}
+  
   .why-grid{grid-template-columns:1fr;gap:40px;}
   
   
@@ -568,6 +568,451 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 }
 
 /* 10. Page load — body opacity handled in JS */
+
+/* ── Services dropdown ── */
+.nav-has-dropdown{position:relative;}
+.nav-dropdown-trigger{display:flex;align-items:center;gap:5px;cursor:pointer;}
+.nav-chevron{font-size:11px;transition:transform .25s;display:inline-block;}
+.nav-has-dropdown:hover .nav-chevron{transform:rotate(180deg);}
+.nav-dropdown{
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(10,10,22,0.96);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px 8px 8px;
+  min-width:220px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s, transform .2s;
+  z-index:200;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+}
+.nav-dropdown::before{
+  content:'';
+  position:absolute;
+  top:6px;left:50%;
+  transform:translateX(-50%);
+  width:12px;height:12px;
+  background:rgba(10,10,22,0.96);
+  border-left:1px solid var(--border);
+  border-top:1px solid var(--border);
+  rotate:45deg;
+}
+.nav-has-dropdown:hover .nav-dropdown{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(-50%);
+}
+.nav-drop-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 14px;
+  border-radius:9px;
+  transition:background .15s, color .15s;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:600;
+  white-space:nowrap;
+}
+.nav-drop-item:hover{background:var(--indigo-dim);color:var(--white);}
+.nav-drop-item i{color:var(--indigo);font-size:16px;flex-shrink:0;}
+
+/* Mobile services sub-group */
+.mob-services-group{display:flex;flex-direction:column;gap:0;padding:4px 0 4px 16px;border-left:2px solid var(--indigo-border);}
+.mob-sub-link{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);padding:8px 0;text-transform:uppercase;transition:color .2s;}
+.mob-sub-link:hover{color:var(--white);}
+
+
+/* ── ECOSYSTEM SECTION ── */
+.ecosystem-section{padding:96px 0;background:var(--depth);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.ecosystem-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(48px,6vw,96px);align-items:center;}
+.ecosystem-loop{position:relative;display:flex;align-items:center;justify-content:center;}
+.eco-ring{
+  position:relative;
+  width:380px;height:380px;
+  border-radius:50%;
+  border:1px solid rgba(108,99,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.eco-ring::before{
+  content:"";position:absolute;inset:-16px;border-radius:50%;
+  border:1px solid rgba(108,99,255,.07);
+}
+.eco-centre{
+  width:90px;height:90px;background:var(--indigo);border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:#fff;font-family:var(--sans);font-weight:800;font-size:13px;
+  letter-spacing:-.02em;text-align:center;line-height:1.2;
+  box-shadow:0 0 40px rgba(108,99,255,.4);
+}
+.eco-node{
+  position:absolute;width:72px;height:72px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:4px;transition:border-color .25s,transform .25s,box-shadow .25s;
+  text-decoration:none;
+}
+.eco-node:hover{border-color:var(--indigo);transform:scale(1.1);box-shadow:0 0 20px rgba(108,99,255,.2);}
+.eco-node i{color:var(--indigo);font-size:18px;}
+.eco-node-label{font-family:var(--mono);font-size:8px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;text-align:center;line-height:1.2;}
+.eco-connector{position:absolute;top:50%;left:50%;width:1px;background:linear-gradient(180deg,var(--indigo),rgba(108,99,255,.1));transform-origin:top center;opacity:.3;}
+.ecosystem-text h2{font-family:var(--sans);font-weight:800;font-size:clamp(28px,3.5vw,48px);letter-spacing:-.04em;color:var(--white);margin-bottom:20px;line-height:1.05;}
+.ecosystem-text p{font-family:var(--sans);font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:28px;}
+.eco-benefits{display:flex;flex-direction:column;gap:12px;margin-bottom:36px;}
+.eco-benefit{display:flex;align-items:flex-start;gap:12px;}
+.eco-benefit i{color:var(--indigo);font-size:16px;flex-shrink:0;margin-top:2px;}
+.eco-benefit-text{font-family:var(--sans);font-size:14px;color:var(--muted);line-height:1.6;}
+.eco-benefit-text strong{color:var(--white);font-weight:700;}
+@media(max-width:1024px){
+  .ecosystem-inner{grid-template-columns:1fr;}
+  .eco-ring{width:320px;height:320px;margin:0 auto;}
+}
+@media(max-width:480px){.eco-ring{width:280px;height:280px;}}
+
+
+/* ── Mobile services accordion ── */
+.mob-services-trigger{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--white);
+  padding:16px 0;
+  border:none;
+  background:none;
+  cursor:pointer;
+  border-bottom:1px solid var(--border);
+}
+.mob-services-trigger i{
+  color:var(--indigo);
+  font-size:14px;
+  transition:transform .3s cubic-bezier(0.22,1,0.36,1);
+}
+.mob-services-trigger.open i{transform:rotate(180deg);}
+.mob-services-group{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s cubic-bezier(0.22,1,0.36,1);
+  border-bottom:1px solid var(--border);
+}
+.mob-services-group.open{max-height:400px;}
+.mob-sub-link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--sans);
+  font-size:15px;
+  font-weight:600;
+  color:var(--muted);
+  padding:12px 16px;
+  transition:color .2s, background .2s;
+  border-radius:8px;
+}
+.mob-sub-link:first-child{margin-top:6px;}
+.mob-sub-link:last-child{margin-bottom:6px;}
+.mob-sub-link:hover{color:var(--white);background:var(--indigo-dim);}
+.mob-sub-link i{color:var(--indigo);font-size:15px;flex-shrink:0;}
+
+
+/* ── Mobile optimisations ── */
+@media(max-width:768px){
+  /* General spacing */
+  .section-h2{font-size:clamp(28px,7vw,42px);}
+  .container{padding:0 20px;}
+
+  /* Hero sections */
+  .svc-hero-inner{max-width:100%;}
+  .svc-hero-stats{gap:24px;}
+  .svc-stat-num{font-size:26px;}
+
+  /* About page */
+  .about-hero h1{font-size:clamp(36px,9vw,56px);}
+  .timeline{gap:0;}
+
+  /* Process page */
+  .phase-block{gap:32px;}
+  .phase-visual{padding:28px 22px;}
+  .phase-step-num{font-size:clamp(60px,14vw,100px);}
+  .tl-steps{gap:24px;}
+  .tl-step{padding-right:0;}
+
+  /* Contact page */
+  .contact-hero h1{font-size:clamp(36px,9vw,56px);}
+
+  /* Blog pages */
+  .cat-preview-grid{grid-template-columns:1fr;}
+  .notify-form{flex-direction:column;}
+  .cat-nav{gap:6px;}
+  .cat-nav-item{font-size:9px;padding:6px 12px;}
+
+  /* Ecosystem */
+  .ecosystem-inner{grid-template-columns:1fr;gap:48px;}
+  .eco-ring{width:300px;height:300px;margin:0 auto;}
+  .eco-node{width:60px;height:60px;}
+  .eco-node i{font-size:16px;}
+  .eco-node-label{font-size:7px;}
+  .eco-centre{width:80px;height:80px;font-size:11px;}
+
+  /* Footer */
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-logo-wrap{grid-column:1/-1;}
+
+  /* Thank you */
+  .ty-inner{max-width:100%;}
+  .ty-steps{margin-bottom:32px;}
+  .ty-h1{font-size:clamp(36px,9vw,56px);}
+
+  /* Value cards about page */
+  .values-grid{grid-template-columns:1fr;}
+  .tools-cards{grid-template-columns:1fr;}
+  .bg-grid{grid-template-columns:1fr;}
+  .mission-inner{grid-template-columns:1fr;gap:32px;}
+}
+
+@media(max-width:480px){
+  .container{padding:0 16px;}
+  .hero-ctas{flex-direction:column;align-items:flex-start;}
+  .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
+  .svc-hero-stats{flex-direction:column;gap:20px;}
+  .ty-actions{flex-direction:column;}
+  .ty-actions a{width:100%;text-align:center;justify-content:center;}
+  .social-row{flex-direction:column;}
+  .social-link{justify-content:center;}
+}
+
+
+/* ── SERVICES CAROUSEL ── */
+.svc-carousel-wrap{
+  position:relative;
+  overflow:hidden;
+  margin:52px -40px 0;
+  padding:24px 40px 32px;
+  cursor:grab;
+  user-select:none;
+}
+.svc-carousel-wrap:active{cursor:grabbing;}
+.svc-carousel-wrap::before,
+.svc-carousel-wrap::after{
+  content:'';
+  position:absolute;
+  top:0;bottom:32px;
+  width:80px;
+  z-index:2;
+  pointer-events:none;
+}
+.svc-carousel-wrap::before{
+  left:0;
+  background:linear-gradient(90deg,var(--depth),transparent);
+}
+.svc-carousel-wrap::after{
+  right:0;
+  background:linear-gradient(-90deg,var(--depth),transparent);
+}
+.svc-carousel{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  overflow-y:visible;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:8px 4px 16px;
+}
+.svc-carousel::-webkit-scrollbar{display:none;}
+.svc-card{
+  flex:0 0 320px;
+  min-height:320px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:32px 28px;
+  position:relative;
+  overflow:hidden;
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+}
+.svc-card::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--indigo),transparent);
+  opacity:0;
+  transition:opacity .3s;
+}
+.svc-card:hover{
+  border-color:var(--indigo-border);
+  transform:translateY(-4px);
+  box-shadow:0 16px 48px rgba(0,0,0,.3);
+}
+.svc-card:hover::after{opacity:1;}
+.svc-card:hover .svc-icon{
+  transform:scale(1.1) rotate(-5deg);
+  background:rgba(108,99,255,.2);
+}
+.svc-num{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.18em;
+  color:rgba(108,99,255,.35);
+  margin-bottom:8px;
+  transition:color .2s;
+}
+.svc-card:hover .svc-num{color:var(--indigo);}
+.svc-title{
+  font-family:var(--sans);
+  font-weight:800;
+  font-size:clamp(17px,1.8vw,21px);
+  letter-spacing:-.02em;
+  color:var(--white);
+  margin-bottom:10px;
+}
+.svc-desc{
+  font-family:var(--sans);
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.75;
+  flex:1;
+  margin-bottom:18px;
+}
+.svc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
+.svc-tag{
+  font-family:var(--mono);
+  font-size:9px;
+  letter-spacing:.1em;
+  color:var(--muted);
+  padding:4px 10px;
+  border-radius:4px;
+  border:1px solid var(--border);
+  transition:border-color .2s,color .2s;
+}
+.svc-card:hover .svc-tag{border-color:rgba(108,99,255,.2);color:rgba(108,99,255,.7);}
+.svc-link{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--indigo);
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-top:auto;
+  transition:gap .2s;
+}
+.svc-card:hover .svc-link{gap:10px;}
+
+/* Carousel controls */
+.svc-carousel-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:20px;
+  gap:16px;
+}
+/* Progress bar */
+.svc-progress-wrap{
+  flex:1;
+  height:2px;
+  background:var(--border);
+  border-radius:2px;
+  overflow:hidden;
+}
+.svc-progress-bar{
+  height:100%;
+  background:var(--indigo);
+  border-radius:2px;
+  transition:width .3s cubic-bezier(0.22,1,0.36,1);
+  box-shadow:0 0 8px rgba(108,99,255,.5);
+  width:0%;
+}
+/* Counter */
+.svc-counter{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--muted);
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.svc-counter span{color:var(--white);}
+/* Arrows */
+.svc-carousel-arrows{display:flex;gap:8px;flex-shrink:0;}
+.svc-arrow{
+  width:40px;height:40px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  transition:border-color .2s,background .2s,transform .15s;
+  font-size:16px;
+}
+.svc-arrow:hover{
+  border-color:var(--indigo);
+  background:var(--indigo-dim);
+  transform:scale(1.05);
+}
+.svc-arrow:disabled{opacity:.3;cursor:default;transform:none;}
+/* Active card highlight */
+.svc-card{
+  transition:border-color .3s,transform .4s cubic-bezier(0.22,1,0.36,1),
+             box-shadow .3s,opacity .3s;
+}
+.svc-card.svc-card-dim{
+  opacity:.55;
+  transform:scale(0.97);
+}
+.svc-card.svc-card-active{
+  border-color:var(--indigo-border) !important;
+  transform:scale(1.03) translateY(-4px) !important;
+  box-shadow:0 20px 60px rgba(108,99,255,.2), 0 0 0 1px rgba(108,99,255,.3);
+  opacity:1 !important;
+}
+.svc-card.svc-card-active::after{opacity:1 !important;}
+
+@media(max-width:768px){
+  .svc-carousel-wrap{margin:40px -20px 0;padding:0 20px 24px;}
+  .svc-card{flex:0 0 280px;min-height:280px;padding:24px 22px;}
+}
+@media(max-width:480px){
+  .svc-card{flex:0 0 calc(100vw - 56px);}
+}
+
+
+/* ── Carousel enhancements ── */
+.svc-progress-wrap{flex:1;height:2px;background:var(--border);border-radius:2px;overflow:hidden;}
+.svc-progress-bar{height:100%;background:var(--indigo);border-radius:2px;transition:width .35s cubic-bezier(0.22,1,0.36,1);box-shadow:0 0 8px rgba(108,99,255,.5);width:14.28%;}
+.svc-counter{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);white-space:nowrap;flex-shrink:0;}
+.svc-counter span{color:var(--white);}
+.svc-carousel-controls{display:flex;align-items:center;justify-content:space-between;margin-top:20px;gap:16px;}
+/* Hover highlight — dim others when one is hovered */
+.svc-carousel:hover .svc-card{
+  opacity:.5;
+  transform:scale(0.97);
+}
+.svc-carousel:hover .svc-card:hover{
+  opacity:1;
+  transform:scale(1.04);
+  border-color:rgba(108,99,255,.6);
+  box-shadow:0 24px 64px rgba(0,0,0,.35),0 0 0 1px rgba(108,99,255,.3),inset 0 1px 0 rgba(108,99,255,.2);
+  z-index:2;
+}
+.svc-carousel:hover .svc-card:hover::after{opacity:1;}
 </style>
 </head>
 <body>
@@ -576,20 +1021,41 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 <div class="grid-bg"></div>
 
 <div id="mobile-menu">
-  <a href="#services" class="mob-link">Services</a>
+  <button class="mob-services-trigger" id="mob-services-trigger" aria-expanded="false" aria-controls="mob-services-group">
+    Services <i class="ti ti-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div class="mob-services-group" id="mob-services-group" role="region">
+    <a href="services/web-development.html" class="mob-sub-link"><i class="ti ti-code" aria-hidden="true"></i>Web Development</a>
+    <a href="services/seo.html" class="mob-sub-link"><i class="ti ti-search" aria-hidden="true"></i>SEO</a>
+    <a href="services/paid-media.html" class="mob-sub-link"><i class="ti ti-speakerphone" aria-hidden="true"></i>Paid Media</a>
+    <a href="services/ai-automations.html" class="mob-sub-link"><i class="ti ti-brain" aria-hidden="true"></i>AI Automations</a>
+    <a href="services/cro.html" class="mob-sub-link"><i class="ti ti-chart-line" aria-hidden="true"></i>CRO</a>
+    <a href="services/data.html" class="mob-sub-link"><i class="ti ti-database" aria-hidden="true"></i>Data &amp; Analytics</a>
+    <a href="services/ux-ui.html" class="mob-sub-link"><i class="ti ti-palette" aria-hidden="true"></i>UX / UI Design</a>
+  </div>
   <a href="about.html" class="mob-link">About</a>
   <a href="process.html" class="mob-link">Process</a>
   <a href="blog.html" class="mob-link">Blog</a>
   <a href="contact.html" class="mob-link">Contact</a>
   <div class="mob-divider"></div>
-  <a href="contact.html" class="btn-primary">Book a call →</a>
+  <a href="contact.html" class="btn-primary">Book a call &rarr;</a>
 </div>
-
 <nav id="main-nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo"><div class="vt-mark">VT</div><span class="nav-brand">Veritech</span></a>
     <ul class="nav-links"><div id="nav-pill"></div>
-      <li><a href="#services" data-section="services">Services</a></li>
+      <li class="nav-has-dropdown">
+        <a href="index.html#services" class="nav-dropdown-trigger">Services <i class="ti ti-chevron-down nav-chevron" aria-hidden="true"></i></a>
+        <div class="nav-dropdown">
+          <a href="services/web-development.html" class="nav-drop-item"><i class="ti ti-code" aria-hidden="true"></i><span>Web Development</span></a>
+          <a href="services/seo.html" class="nav-drop-item"><i class="ti ti-search" aria-hidden="true"></i><span>SEO</span></a>
+          <a href="services/paid-media.html" class="nav-drop-item"><i class="ti ti-speakerphone" aria-hidden="true"></i><span>Paid Media</span></a>
+          <a href="services/ai-automations.html" class="nav-drop-item"><i class="ti ti-brain" aria-hidden="true"></i><span>AI Automations</span></a>
+          <a href="services/cro.html" class="nav-drop-item"><i class="ti ti-chart-line" aria-hidden="true"></i><span>CRO</span></a>
+          <a href="services/data.html" class="nav-drop-item"><i class="ti ti-database" aria-hidden="true"></i><span>Data &amp; Analytics</span></a>
+          <a href="services/ux-ui.html" class="nav-drop-item"><i class="ti ti-palette" aria-hidden="true"></i><span>UX / UI Design</span></a>
+        </div>
+      </li>
       <li><a href="about.html">About</a></li>
       <li><a href="process.html">Process</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -604,7 +1070,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   <div id="hero-spotlight"></div>
   <canvas id="neural-canvas"></canvas>
   <div class="container hero-inner">
-    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Johannesburg · Dev · AI · SEO · CRO · Data · UX/UI</div>
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span>Johannesburg · Dev · AI · SEO · Paid Media · CRO · Data · UX/UI</div>
     <h1 class="hero-h1">
       <span class="hero-line"><span class="hero-line-inner r1">Build smarter.</span></span>
       <span class="hero-line"><span class="hero-line-inner r2">Rank higher.</span></span>
@@ -621,68 +1087,88 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 
 <section id="services"><div class="container">
     <div class="services-header reveal">
-      <div><div class="tag">What we do</div><h2 class="section-h2">Six services.<br>One agency.</h2></div>
-      <p class="services-header-right">Built by a developer who's shipped everything from security incident recovery to live AI agents — and knows where most digital work actually breaks.</p>
+      <div><div class="tag">What we do</div><h2 class="section-h2">Seven services.<br>One agency.</h2></div>
+      <p class="services-header-right">Built by a developer who&rsquo;s shipped everything from security incident recovery to live AI agents &mdash; and knows where most digital work actually breaks.</p>
     </div>
-    <div class="services-grid">
+    <div class="svc-carousel-wrap" id="svc-carousel-wrap">
+      <div class="svc-carousel" id="svc-carousel">
 
-      <a href="services/web-development.html" class="svc-card reveal">
-        <div class="svc-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
-        <div class="svc-num">01 —</div>
-        <div class="svc-title">Web Development</div>
-        <p class="svc-desc">Custom WordPress builds, WooCommerce stores, Shopify customisation, and complex API integrations — AutoTrader feeds, CRM webhooks, lead routing systems. No page builders. No shortcuts.</p>
-        <div class="svc-tags"><span class="svc-tag">WordPress</span><span class="svc-tag">WooCommerce</span><span class="svc-tag">Custom Dev</span><span class="svc-tag">APIs</span></div>
-        <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
-      </a>
+        <a href="services/web-development.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
+          <div class="svc-num">01 &mdash;</div>
+          <div class="svc-title">Web Development</div>
+          <p class="svc-desc">Custom WordPress builds, WooCommerce stores, Shopify customisation, and complex API integrations — AutoTrader feeds, CRM webhooks, lead routing systems. No page builders. No shortcuts.</p>
+          <div class="svc-tags"><span class="svc-tag">WordPress</span><span class="svc-tag">WooCommerce</span><span class="svc-tag">Custom Dev</span><span class="svc-tag">APIs</span></div>
+          <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
+        </a>
 
-      <a href="services/seo.html" class="svc-card reveal" style="transition-delay:.08s">
-        <div class="svc-icon"><i class="ti ti-search" aria-hidden="true"></i></div>
-        <div class="svc-num">02 —</div>
-        <div class="svc-title">SEO</div>
-        <p class="svc-desc">Technical SEO audits, on-page optimisation, content strategy, and GEO — built to rank in both traditional search and AI-powered engines like Perplexity and ChatGPT.</p>
-        <div class="svc-tags"><span class="svc-tag">Technical SEO</span><span class="svc-tag">Content</span><span class="svc-tag">On-page</span><span class="svc-tag">GEO</span></div>
-        <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
-      </a>
+        <a href="services/seo.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-search" aria-hidden="true"></i></div>
+          <div class="svc-num">02 &mdash;</div>
+          <div class="svc-title">SEO</div>
+          <p class="svc-desc">Technical SEO audits, on-page optimisation, content strategy, and GEO — built to rank in both traditional search and AI-powered engines like Perplexity and ChatGPT.</p>
+          <div class="svc-tags"><span class="svc-tag">Technical SEO</span><span class="svc-tag">Content</span><span class="svc-tag">On-Page</span><span class="svc-tag">GEO</span></div>
+          <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
+        </a>
 
-      <a href="services/ai-automations.html" class="svc-card reveal" style="transition-delay:.16s">
-        <div class="svc-icon"><i class="ti ti-settings-automation" aria-hidden="true"></i></div>
-        <div class="svc-num">03 —</div>
-        <div class="svc-title">AI Automations</div>
-        <p class="svc-desc">Custom AI agents, automated lead pipelines, CRM integrations, and workflow automation using n8n, Make, and the OpenAI and Claude APIs. We've built live intelligence tools — not demos.</p>
-        <div class="svc-tags"><span class="svc-tag">Workflow AI</span><span class="svc-tag">CRM</span><span class="svc-tag">Lead Systems</span><span class="svc-tag">AI Agents</span></div>
-        <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
-      </a>
+        <a href="services/paid-media.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+          <div class="svc-num">03 &mdash;</div>
+          <div class="svc-title">Paid Media</div>
+          <p class="svc-desc">Google, Meta, LinkedIn and TikTok advertising managed by specialists — fully integrated with your SEO, CRO and analytics so every rand spent is tracked, optimised and compounded.</p>
+          <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Meta Ads</span><span class="svc-tag">LinkedIn</span><span class="svc-tag">TikTok</span></div>
+          <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
+        </a>
 
-      <a href="services/cro.html" class="svc-card reveal" style="transition-delay:.24s">
-        <div class="svc-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
-        <div class="svc-num">04 —</div>
-        <div class="svc-title">CRO</div>
-        <p class="svc-desc">UX audits, funnel analysis, heatmaps, and A/B testing grounded in real behavioural data — the same methodology behind conversion work across e-commerce, automotive, and B2B clients.</p>
-        <div class="svc-tags"><span class="svc-tag">A/B Testing</span><span class="svc-tag">Funnel Analysis</span><span class="svc-tag">UX Audit</span><span class="svc-tag">Analytics</span></div>
-        <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
-      </a>
+        <a href="services/ai-automations.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-brain" aria-hidden="true"></i></div>
+          <div class="svc-num">04 &mdash;</div>
+          <div class="svc-title">AI Automations</div>
+          <p class="svc-desc">Custom AI agents, automated lead pipelines, CRM integrations, and workflow automation using n8n, Make, and the OpenAI and Claude APIs. We&rsquo;ve built live intelligence tools &mdash; not demos.</p>
+          <div class="svc-tags"><span class="svc-tag">Workflow AI</span><span class="svc-tag">CRM</span><span class="svc-tag">Lead Systems</span><span class="svc-tag">AI Agents</span></div>
+          <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
+        </a>
 
-      <a href="services/data.html" class="svc-card reveal" style="transition-delay:.32s;background-image:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(108,99,255,.1),transparent 55%);">
-        <div class="svc-icon"><i class="ti ti-database" aria-hidden="true"></i></div>
-        <div class="svc-num">05 —</div>
-        <div class="svc-title">Data & Analytics</div>
-        <p class="svc-desc">GA4 setup, GTM configuration, Looker Studio dashboards, attribution modelling, and data pipeline work. We've built the reporting layer for clients who were flying blind — and changed how they make decisions.</p>
-        <div class="svc-tags"><span class="svc-tag">Dashboards</span><span class="svc-tag">BI Reporting</span><span class="svc-tag">GA4 + GTM</span><span class="svc-tag">Attribution</span><span class="svc-tag">Predictive Analytics</span></div>
-        <span class="svc-link">Explore data services <i class="ti ti-arrow-right"></i></span>
-      </a>
+        <a href="services/cro.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+          <div class="svc-num">05 &mdash;</div>
+          <div class="svc-title">CRO</div>
+          <p class="svc-desc">UX audits, funnel analysis, heatmaps, and A/B testing grounded in real behavioural data — the same methodology behind conversion work across e-commerce, automotive, and B2B clients.</p>
+          <div class="svc-tags"><span class="svc-tag">A/B Testing</span><span class="svc-tag">Funnel Analysis</span><span class="svc-tag">UX Audit</span><span class="svc-tag">Analytics</span></div>
+          <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
+        </a>
 
-      <a href="services/ux-ui.html" class="svc-card reveal" style="transition-delay:.4s">
-        <div class="svc-icon"><i class="ti ti-vector-triangle" aria-hidden="true"></i></div>
-        <div class="svc-num">06 —</div>
-        <div class="svc-title">UX / UI Design</div>
-        <p class="svc-desc">Interfaces people actually want to use. Research-led design that reduces friction, builds trust, and guides users toward conversion at every step.</p>
-        <div class="svc-tags"><span class="svc-tag">User Research</span><span class="svc-tag">Wireframing</span><span class="svc-tag">Prototyping</span><span class="svc-tag">Design Systems</span></div>
-        <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
-      </a>
+        <a href="services/data.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-database" aria-hidden="true"></i></div>
+          <div class="svc-num">06 &mdash;</div>
+          <div class="svc-title">Data &amp; Analytics</div>
+          <p class="svc-desc">GA4 setup, GTM configuration, Looker Studio dashboards, attribution modelling, and data pipeline work. We&rsquo;ve built the reporting layer for clients who were flying blind &mdash; and changed how they make decisions.</p>
+          <div class="svc-tags"><span class="svc-tag">Dashboards</span><span class="svc-tag">BI Reporting</span><span class="svc-tag">GA4 + GTM</span><span class="svc-tag">Attribution</span></div>
+          <span class="svc-link">Explore data services <i class="ti ti-arrow-right"></i></span>
+        </a>
 
+        <a href="services/ux-ui.html" class="svc-card">
+          <div class="svc-icon"><i class="ti ti-palette" aria-hidden="true"></i></div>
+          <div class="svc-num">07 &mdash;</div>
+          <div class="svc-title">UX / UI Design</div>
+          <p class="svc-desc">Interfaces people actually want to use. Research-led design that reduces friction, builds trust, and guides users toward conversion at every step.</p>
+          <div class="svc-tags"><span class="svc-tag">User Research</span><span class="svc-tag">Wireframing</span><span class="svc-tag">Prototyping</span><span class="svc-tag">Design Systems</span></div>
+          <span class="svc-link">Learn more <i class="ti ti-arrow-right"></i></span>
+        </a>
+
+      </div>
+      <div class="svc-carousel-controls">
+        <div class="svc-progress-wrap">
+          <div class="svc-progress-bar" id="svc-progress"></div>
+        </div>
+        <div class="svc-counter" id="svc-counter"><span>01</span> / 07</div>
+        <div class="svc-carousel-arrows">
+          <button class="svc-arrow" id="svc-prev" aria-label="Previous"><i class="ti ti-arrow-left"></i></button>
+          <button class="svc-arrow" id="svc-next" aria-label="Next"><i class="ti ti-arrow-right"></i></button>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </div></section>
 
 <section id="why"><div class="container">
     <div class="why-grid">
@@ -926,15 +1412,20 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <li><a href="services/ai-automations.html">AI Automations</a></li>
           <li><a href="services/cro.html">CRO</a></li>
           <li><a href="services/data.html">Data & Analytics</a></li>
+          <li><a href="services/paid-media.html">Paid Media</a></li>
+          <li><a href="services/ux-ui.html">UX / UI Design</a></li>
         </ul></div>
         <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="about.html">About</a></li><li><a href="process.html">Process</a></li><li><a href="#">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li></ul></div>
         <div class="footer-col"><div class="footer-col-title">Get in touch</div><ul><li><a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a></li><li><a href="#">Johannesburg, SA</a></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Veritech. All rights reserved.</span><span style="color:var(--indigo)">Built by Veritech</span></div>
+    <div class="footer-bottom">
+    <span>&copy; 2026 Veritech Digital. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a></span>
+    <span>Built by Veritech</span>
   </div>
-</footer>
+  </div>
+
 
 <script>
 (function(){
@@ -1275,6 +1766,139 @@ document.querySelectorAll('.stack-tab').forEach(tab => {
   });
   // Fallback in case load already fired
   setTimeout(function(){ document.body.style.opacity = '1'; }, 600);
+})();
+
+
+// mob-services-accordion
+
+// ── Mobile services accordion ──
+(function(){
+  var trigger = document.getElementById('mob-services-trigger');
+  var group   = document.getElementById('mob-services-group');
+  if(!trigger || !group) return;
+  trigger.addEventListener('click', function(){
+    trigger.classList.toggle('open');
+    group.classList.toggle('open');
+  });
+})();
+
+
+// ── SERVICES CAROUSEL ──
+(function(){
+  var carousel = document.getElementById('svc-carousel');
+  var prev     = document.getElementById('svc-prev');
+  var next     = document.getElementById('svc-next');
+  var progress = document.getElementById('svc-progress');
+  var counter  = document.getElementById('svc-counter');
+  if(!carousel) return;
+
+  var cards    = Array.prototype.slice.call(carousel.querySelectorAll('.svc-card'));
+  var total    = cards.length;
+  var current  = 0;
+  var autoTimer = null;
+  var isDrag   = false;
+  var startX   = 0;
+  var scrollStart = 0;
+
+  function getCardW(){
+    return cards[0] ? cards[0].offsetWidth + 16 : 336;
+  }
+
+  function updateUI(){
+    // Progress bar
+    if(progress){
+      progress.style.width = ((current + 1) / total * 100) + '%';
+    }
+    // Counter
+    if(counter){
+      var num = current + 1;
+      counter.innerHTML = '<span>' + (num < 10 ? '0'+num : num) + '</span> / ' + (total < 10 ? '0'+total : total);
+    }
+    // Arrows
+    if(prev) prev.disabled = current === 0;
+    if(next) next.disabled = current >= total - 1;
+    // Card highlight handled by CSS hover
+  }
+
+  function scrollTo(idx, smooth){
+    current = Math.max(0, Math.min(idx, total - 1));
+    carousel.scrollTo({left: current * getCardW(), behavior: smooth === false ? 'auto' : 'smooth'});
+    updateUI();
+  }
+
+  // Arrow clicks
+  if(prev) prev.addEventListener('click', function(){ scrollTo(current - 1); });
+  if(next) next.addEventListener('click', function(){ scrollTo(current + 1); });
+
+  // Drag to scroll
+  carousel.addEventListener('mousedown', function(e){
+    isDrag = true;
+    startX = e.pageX;
+    scrollStart = carousel.scrollLeft;
+    carousel.style.scrollBehavior = 'auto';
+    resetAuto();
+  });
+  window.addEventListener('mousemove', function(e){
+    if(!isDrag) return;
+    carousel.scrollLeft = scrollStart - (e.pageX - startX);
+  });
+  window.addEventListener('mouseup', function(e){
+    if(!isDrag) return;
+    isDrag = false;
+    carousel.style.scrollBehavior = 'smooth';
+    var moved = e.pageX - startX;
+    if(Math.abs(moved) > 60){
+      scrollTo(moved < 0 ? current + 1 : current - 1);
+    } else {
+      scrollTo(current);
+    }
+  });
+
+  // Touch swipe
+  var touchStartX = 0;
+  carousel.addEventListener('touchstart', function(e){
+    touchStartX = e.touches[0].clientX;
+  }, {passive:true});
+  carousel.addEventListener('touchend', function(e){
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 50) scrollTo(diff > 0 ? current + 1 : current - 1);
+  }, {passive:true});
+
+  // Sync on manual scroll
+  carousel.addEventListener('scroll', function(){
+    if(isDrag) return;
+    var idx = Math.round(carousel.scrollLeft / getCardW());
+    if(idx !== current){ current = idx; updateUI(); }
+  }, {passive:true});
+
+  // Keyboard
+  carousel.setAttribute('tabindex','0');
+  carousel.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight'){ scrollTo(current+1); }
+    if(e.key === 'ArrowLeft'){  scrollTo(current-1); }
+  });
+
+  // ── Hover sync: counter + progress follow hovered card ──
+  cards.forEach(function(card, i){
+    card.addEventListener('mouseenter', function(){
+      // Update progress bar
+      if(progress){
+        progress.style.width = ((i + 1) / total * 100) + '%';
+      }
+      // Update counter
+      if(counter){
+        var num = i + 1;
+        counter.innerHTML = '<span>' + (num < 10 ? '0'+num : num) + '</span> / ' + (total < 10 ? '0'+total : total);
+      }
+    });
+    card.addEventListener('mouseleave', function(){
+      // Restore to actual scroll position
+      updateUI();
+    });
+  });
+
+  // Init
+  updateUI();
 })();
 
 </script>

@@ -643,6 +643,182 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 .about-hero #hero-spotlight,.contact-hero #hero-spotlight,.process-hero #hero-spotlight{position:absolute;inset:0;pointer-events:none;z-index:1;opacity:0;transition:opacity .4s;}
 .about-hero .container,.contact-hero .container,.process-hero .container{position:relative;z-index:2;}
 .about-hero-inner,.about-hero h1,.about-hero p{position:relative;z-index:2;}
+
+/* ── Services dropdown ── */
+.nav-has-dropdown{position:relative;}
+.nav-dropdown-trigger{display:flex;align-items:center;gap:5px;cursor:pointer;}
+.nav-chevron{font-size:11px;transition:transform .25s;display:inline-block;}
+.nav-has-dropdown:hover .nav-chevron{transform:rotate(180deg);}
+.nav-dropdown{
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(10,10,22,0.96);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px 8px 8px;
+  min-width:220px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s, transform .2s;
+  z-index:200;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+}
+.nav-dropdown::before{
+  content:'';
+  position:absolute;
+  top:6px;left:50%;
+  transform:translateX(-50%);
+  width:12px;height:12px;
+  background:rgba(10,10,22,0.96);
+  border-left:1px solid var(--border);
+  border-top:1px solid var(--border);
+  rotate:45deg;
+}
+.nav-has-dropdown:hover .nav-dropdown{
+  opacity:1;
+  pointer-events:all;
+  transform:translateX(-50%);
+}
+.nav-drop-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 14px;
+  border-radius:9px;
+  transition:background .15s, color .15s;
+  color:var(--muted);
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:600;
+  white-space:nowrap;
+}
+.nav-drop-item:hover{background:var(--indigo-dim);color:var(--white);}
+.nav-drop-item i{color:var(--indigo);font-size:16px;flex-shrink:0;}
+
+/* Mobile services sub-group */
+.mob-services-group{display:flex;flex-direction:column;gap:0;padding:4px 0 4px 16px;border-left:2px solid var(--indigo-border);}
+.mob-sub-link{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);padding:8px 0;text-transform:uppercase;transition:color .2s;}
+.mob-sub-link:hover{color:var(--white);}
+
+
+/* ── Mobile services accordion ── */
+.mob-services-trigger{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--white);
+  padding:16px 0;
+  border:none;
+  background:none;
+  cursor:pointer;
+  border-bottom:1px solid var(--border);
+}
+.mob-services-trigger i{
+  color:var(--indigo);
+  font-size:14px;
+  transition:transform .3s cubic-bezier(0.22,1,0.36,1);
+}
+.mob-services-trigger.open i{transform:rotate(180deg);}
+.mob-services-group{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .4s cubic-bezier(0.22,1,0.36,1);
+  border-bottom:1px solid var(--border);
+}
+.mob-services-group.open{max-height:400px;}
+.mob-sub-link{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--sans);
+  font-size:15px;
+  font-weight:600;
+  color:var(--muted);
+  padding:12px 16px;
+  transition:color .2s, background .2s;
+  border-radius:8px;
+}
+.mob-sub-link:first-child{margin-top:6px;}
+.mob-sub-link:last-child{margin-bottom:6px;}
+.mob-sub-link:hover{color:var(--white);background:var(--indigo-dim);}
+.mob-sub-link i{color:var(--indigo);font-size:15px;flex-shrink:0;}
+
+
+/* ── Mobile optimisations ── */
+@media(max-width:768px){
+  /* General spacing */
+  .section-h2{font-size:clamp(28px,7vw,42px);}
+  .container{padding:0 20px;}
+
+  /* Hero sections */
+  .svc-hero-inner{max-width:100%;}
+  .svc-hero-stats{gap:24px;}
+  .svc-stat-num{font-size:26px;}
+
+  /* About page */
+  .about-hero h1{font-size:clamp(36px,9vw,56px);}
+  .timeline{gap:0;}
+
+  /* Process page */
+  .phase-block{gap:32px;}
+  .phase-visual{padding:28px 22px;}
+  .phase-step-num{font-size:clamp(60px,14vw,100px);}
+  .tl-steps{gap:24px;}
+  .tl-step{padding-right:0;}
+
+  /* Contact page */
+  .contact-hero h1{font-size:clamp(36px,9vw,56px);}
+
+  /* Blog pages */
+  .cat-preview-grid{grid-template-columns:1fr;}
+  .notify-form{flex-direction:column;}
+  .cat-nav{gap:6px;}
+  .cat-nav-item{font-size:9px;padding:6px 12px;}
+
+  /* Ecosystem */
+  .ecosystem-inner{grid-template-columns:1fr;gap:48px;}
+  .eco-ring{width:300px;height:300px;margin:0 auto;}
+  .eco-node{width:60px;height:60px;}
+  .eco-node i{font-size:16px;}
+  .eco-node-label{font-size:7px;}
+  .eco-centre{width:80px;height:80px;font-size:11px;}
+
+  /* Footer */
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-logo-wrap{grid-column:1/-1;}
+
+  /* Thank you */
+  .ty-inner{max-width:100%;}
+  .ty-steps{margin-bottom:32px;}
+  .ty-h1{font-size:clamp(36px,9vw,56px);}
+
+  /* Value cards about page */
+  .values-grid{grid-template-columns:1fr;}
+  .tools-cards{grid-template-columns:1fr;}
+  .bg-grid{grid-template-columns:1fr;}
+  .mission-inner{grid-template-columns:1fr;gap:32px;}
+}
+
+@media(max-width:480px){
+  .container{padding:0 16px;}
+  .hero-ctas{flex-direction:column;align-items:flex-start;}
+  .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
+  .svc-hero-stats{flex-direction:column;gap:20px;}
+  .ty-actions{flex-direction:column;}
+  .ty-actions a{width:100%;text-align:center;justify-content:center;}
+  .social-row{flex-direction:column;}
+  .social-link{justify-content:center;}
+}
+
 </style>
 </head>
 <body>
@@ -650,19 +826,41 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 <div id="scroll-edge"></div>
 <div class="grid-bg"></div>
 <div id="mobile-menu">
-  <a href="index.html#services" class="mob-link">Services</a>
+  <button class="mob-services-trigger" id="mob-services-trigger" aria-expanded="false" aria-controls="mob-services-group">
+    Services <i class="ti ti-chevron-down" aria-hidden="true"></i>
+  </button>
+  <div class="mob-services-group" id="mob-services-group" role="region">
+    <a href="services/web-development.html" class="mob-sub-link"><i class="ti ti-code" aria-hidden="true"></i>Web Development</a>
+    <a href="services/seo.html" class="mob-sub-link"><i class="ti ti-search" aria-hidden="true"></i>SEO</a>
+    <a href="services/paid-media.html" class="mob-sub-link"><i class="ti ti-speakerphone" aria-hidden="true"></i>Paid Media</a>
+    <a href="services/ai-automations.html" class="mob-sub-link"><i class="ti ti-brain" aria-hidden="true"></i>AI Automations</a>
+    <a href="services/cro.html" class="mob-sub-link"><i class="ti ti-chart-line" aria-hidden="true"></i>CRO</a>
+    <a href="services/data.html" class="mob-sub-link"><i class="ti ti-database" aria-hidden="true"></i>Data &amp; Analytics</a>
+    <a href="services/ux-ui.html" class="mob-sub-link"><i class="ti ti-palette" aria-hidden="true"></i>UX / UI Design</a>
+  </div>
   <a href="about.html" class="mob-link">About</a>
   <a href="process.html" class="mob-link">Process</a>
   <a href="blog.html" class="mob-link">Blog</a>
   <a href="contact.html" class="mob-link">Contact</a>
   <div class="mob-divider"></div>
-  <a href="contact.html" class="btn-primary">Book a call →</a>
+  <a href="contact.html" class="btn-primary">Book a call &rarr;</a>
 </div>
 <nav id="main-nav">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo"><div class="vt-mark">VT</div><span class="nav-brand">Veritech</span></a>
     <ul class="nav-links"><div id="nav-pill"></div>
-      <li><a href="index.html#services">Services</a></li>
+      <li class="nav-has-dropdown">
+        <a href="index.html#services" class="nav-dropdown-trigger">Services <i class="ti ti-chevron-down nav-chevron" aria-hidden="true"></i></a>
+        <div class="nav-dropdown">
+          <a href="services/web-development.html" class="nav-drop-item"><i class="ti ti-code" aria-hidden="true"></i><span>Web Development</span></a>
+          <a href="services/seo.html" class="nav-drop-item"><i class="ti ti-search" aria-hidden="true"></i><span>SEO</span></a>
+          <a href="services/paid-media.html" class="nav-drop-item"><i class="ti ti-speakerphone" aria-hidden="true"></i><span>Paid Media</span></a>
+          <a href="services/ai-automations.html" class="nav-drop-item"><i class="ti ti-brain" aria-hidden="true"></i><span>AI Automations</span></a>
+          <a href="services/cro.html" class="nav-drop-item"><i class="ti ti-chart-line" aria-hidden="true"></i><span>CRO</span></a>
+          <a href="services/data.html" class="nav-drop-item"><i class="ti ti-database" aria-hidden="true"></i><span>Data &amp; Analytics</span></a>
+          <a href="services/ux-ui.html" class="nav-drop-item"><i class="ti ti-palette" aria-hidden="true"></i><span>UX / UI Design</span></a>
+        </div>
+      </li>
       <li><a href="about.html">About</a></li>
       <li><a href="process.html">Process</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -835,15 +1033,20 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <li><a href="services/ai-automations.html">AI Automations</a></li>
           <li><a href="services/cro.html">CRO</a></li>
           <li><a href="services/data.html">Data & Analytics</a></li>
+          <li><a href="services/paid-media.html">Paid Media</a></li>
+          <li><a href="services/ux-ui.html">UX / UI Design</a></li>
         </ul></div>
         <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="about.html">About</a></li><li><a href="process.html">Process</a></li><li><a href="#">Case Studies</a></li><li><a href="blog.html">Blog</a></li>
       <li><a href="contact.html">Contact</a></li></ul></div>
         <div class="footer-col"><div class="footer-col-title">Get in touch</div><ul><li><a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a></li><li><a href="#">Johannesburg, SA</a></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Veritech. All rights reserved.</span><span style="color:var(--indigo)">Built by Veritech</span></div>
+    <div class="footer-bottom">
+    <span>&copy; 2026 Veritech Digital. All rights reserved. &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a></span>
+    <span>Built by Veritech</span>
   </div>
-</footer>
+  </div>
+
 <script>
 (function(){
   const canvas=document.getElementById('neural-canvas');
@@ -1182,6 +1385,20 @@ document.querySelectorAll('.stack-tab').forEach(tab => {
   setTimeout(function(){ document.body.style.opacity = '1'; }, 600);
 })();
 (function(){var h=document.querySelector('.about-hero');if(!h)return;var sp=document.getElementById('hero-spotlight');if(!sp)return;h.addEventListener('mousemove',function(e){var r=h.getBoundingClientRect();sp.style.background='radial-gradient(600px circle at '+(e.clientX-r.left)+'px '+(e.clientY-r.top)+'px,rgba(108,99,255,0.09),transparent 70%)';sp.style.opacity='1';});h.addEventListener('mouseleave',function(){sp.style.opacity='0';});})();
+
+// mob-services-accordion
+
+// ── Mobile services accordion ──
+(function(){
+  var trigger = document.getElementById('mob-services-trigger');
+  var group   = document.getElementById('mob-services-group');
+  if(!trigger || !group) return;
+  trigger.addEventListener('click', function(){
+    trigger.classList.toggle('open');
+    group.classList.toggle('open');
+  });
+})();
+
 </script>
 </body>
 </html>
