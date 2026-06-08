@@ -165,11 +165,11 @@ img{max-width:100%;}
 
 /* ── FOOTER ── */
 footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0 40px;}
-.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:48px;}
+.footer-top{display:grid;grid-template-columns:280px 1fr;align-items:flex-start;gap:40px;margin-bottom:48px;}
 .footer-logo{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .footer-brand-name{font-family:var(--sans);font-weight:800;font-size:22px;letter-spacing:.06em;text-transform:uppercase;color:var(--white);}
 .footer-tagline{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
-.footer-links{display:flex;gap:clamp(28px,5vw,64px);}
+.footer-links{display:flex;gap:clamp(28px,4vw,56px);justify-content:flex-end;}
 .footer-col-title{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--indigo);text-transform:uppercase;margin-bottom:18px;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
 .footer-col a{font-family:var(--sans);font-size:13px;color:var(--muted);transition:color .2s,transform .2s;display:inline-block;}
@@ -806,19 +806,22 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 .footer-bottom .built-by{color:var(--indigo);}
 .footer-bottom .built-by:hover{color:#8B84FF;}
 
-/* Footer mobile */
+/* Footer responsive */
+@media(max-width:1024px){
+  .footer-top{grid-template-columns:220px 1fr;}
+}
 @media(max-width:768px){
   footer{padding:48px 0 32px;}
-  .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;}
-  .footer-logo-wrap{grid-column:1/-1;margin-bottom:4px;}
+  .footer-top{grid-template-columns:1fr;gap:32px;}
+  .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:28px 20px;justify-content:flex-start;}
   .footer-tagline{display:none;}
   .footer-col-title{font-size:9px;margin-bottom:10px;}
-  .footer-col ul{display:flex;flex-direction:column;gap:8px;}
-  .footer-col li a{font-size:13px;}
-  .footer-bottom{flex-direction:column;align-items:flex-start;gap:6px;margin-top:32px;}
+  .footer-col ul{gap:8px;}
+  .footer-col a{font-size:12px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:6px;margin-top:24px;}
 }
-@media(max-width:380px){
-  .footer-grid{grid-template-columns:1fr;}
+@media(max-width:480px){
+  .footer-links{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -883,10 +886,10 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 <section class="features-section" id="features" style="background:var(--depth);"><div class="container">
 <div class="reveal"><div class="tag">What's included</div><h2 class="section-h2">Every lever that moves<br>your conversion rate.</h2></div>
 <div class="features-grid">
-<div class="feature-card reveal"><div class="feat-icon"><i class="ti ti-search-off"></i></div><div class="feat-title">UX & Conversion Audit</div><p class="feat-desc">Full review of your site's user experience, funnel flow, and conversion architecture. Find every friction point and trust gap before testing begins — so tests are informed, not random.</p></div>
+<div class="feature-card reveal"><div class="feat-icon"><i class="ti ti-zoom-cancel"></i></div><div class="feat-title">UX & Conversion Audit</div><p class="feat-desc">Full review of your site's user experience, funnel flow, and conversion architecture. Find every friction point and trust gap before testing begins — so tests are informed, not random.</p></div>
 <div class="feature-card reveal" style="transition-delay:.07s"><div class="feat-icon"><i class="ti ti-eye"></i></div><div class="feat-title">Heatmaps & Session Recording</div><p class="feat-desc">Hotjar and Microsoft Clarity analysis to understand how users interact with your site. Where they scroll, click, and drop off — behavioural data that informs every test.</p></div>
-<div class="feature-card reveal" style="transition-delay:.14s"><div class="feat-icon"><i class="ti ti-ab"></i></div><div class="feat-title">A/B & Multivariate Testing</div><p class="feat-desc">Hypothesis-driven testing across headlines, CTAs, layouts, forms, and page flow. Statistical significance before any winner is declared — no gut-feel decisions.</p></div>
-<div class="feature-card reveal" style="transition-delay:.21s"><div class="feat-icon"><i class="ti ti-funnel"></i></div><div class="feat-title">Funnel Analysis</div><p class="feat-desc">Step-by-step breakdown of where your funnel leaks. Awareness to conversion mapped, drop-off points identified, and targeted interventions designed for each stage.</p></div>
+<div class="feature-card reveal" style="transition-delay:.14s"><div class="feat-icon"><i class="ti ti-test-pipe"></i></div><div class="feat-title">A/B & Multivariate Testing</div><p class="feat-desc">Hypothesis-driven testing across headlines, CTAs, layouts, forms, and page flow. Statistical significance before any winner is declared — no gut-feel decisions.</p></div>
+<div class="feature-card reveal" style="transition-delay:.21s"><div class="feat-icon"><i class="ti ti-filter"></i></div><div class="feat-title">Funnel Analysis</div><p class="feat-desc">Step-by-step breakdown of where your funnel leaks. Awareness to conversion mapped, drop-off points identified, and targeted interventions designed for each stage.</p></div>
 <div class="feature-card reveal" style="transition-delay:.28s"><div class="feat-icon"><i class="ti ti-forms"></i></div><div class="feat-title">Landing Page Optimisation</div><p class="feat-desc">Purpose-built landing pages for specific campaigns and audiences. Every element — headline, structure, social proof, form, CTA — tested and optimised for conversion.</p></div>
 <div class="feature-card reveal" style="transition-delay:.35s"><div class="feat-icon"><i class="ti ti-user-check"></i></div><div class="feat-title">Form & Checkout Optimisation</div><p class="feat-desc">Reduce form abandonment and checkout drop-off through field reduction, inline validation, and trust signals. Small changes here create some of the biggest conversion lifts.</p></div>
 </div></div></section>
