@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://veritech.co.za/sitemap.xml
