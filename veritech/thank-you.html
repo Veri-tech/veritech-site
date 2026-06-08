@@ -244,7 +244,6 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   .proc-step:last-child{border-bottom:none;}
   .related-grid{grid-template-columns:1fr 1fr;}
   .cta-band{padding:72px 0;}
-  .footer-top{flex-direction:column;gap:32px;}
   .footer-links{flex-wrap:wrap;gap:28px;}
   .hero-ctas{flex-direction:column;align-items:flex-start;}
   .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
@@ -585,7 +584,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 .ty-h1{font-family:var(--sans);font-weight:800;font-size:clamp(40px,5.5vw,72px);letter-spacing:-.04em;line-height:1.0;color:var(--white);margin-bottom:20px;}
 .ty-sub{font-family:var(--sans);font-size:clamp(15px,1.6vw,18px);color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:48px;}
 
-.ty-steps{display:flex;flex-direction:column;gap:0;margin-bottom:48px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--depth);}
+.ty-steps{display:flex;flex-direction:column;gap:0;margin-bottom:48px;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--depth);width:100%;}
 .ty-step{display:flex;align-items:flex-start;gap:18px;padding:20px 24px;border-bottom:1px solid var(--border);transition:background .2s;}
 .ty-step:last-child{border-bottom:none;}
 .ty-step:hover{background:rgba(108,99,255,.04);}
@@ -894,7 +893,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 </section>
 <footer id="contact">
   <div class="container">
-    <div class="footer-top">
+    <div class="footer-top" style="display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:flex-start;">
       <div class="footer-logo-wrap"><div class="footer-logo"><div class="vt-mark">VT</div><span class="footer-brand-name">Veritech</span></div><div class="footer-tagline">Intelligence. Built. Delivered.</div></div>
       <div class="footer-links">
         <div class="footer-col"><div class="footer-col-title">Services</div><ul>
