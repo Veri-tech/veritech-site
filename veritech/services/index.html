@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Privacy Policy | Veritech</title>
+<title>Services | Veritech Digital</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-<meta name="description" content="Veritech Digital privacy policy — how we collect, use and protect your personal information in accordance with POPIA.">
-<meta name="robots" content="noindex, follow">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="canonical" href="https://www.veritechdigital.co.za/privacy.html">
-<meta property="og:title" content="Privacy Policy | Veritech">
+<meta name="description" content="Veritech Digital offers web development, SEO, paid media, AI automations, CRO, data analytics and UX/UI design services in Johannesburg, South Africa.">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="canonical" href="https://www.veritechdigital.co.za/services">
+<meta property="og:title" content="Services | Veritech Digital">
+<meta property="og:description" content="Seven digital services built to work as one ecosystem — web development, SEO, paid media, AI, CRO, data analytics and UX/UI.">
+<meta property="og:url" content="https://www.veritechdigital.co.za/services">
 <meta property="og:site_name" content="Veritech">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Services","url":"https://www.veritechdigital.co.za/services","description":"Digital agency services including web development, SEO, paid media, AI automations, CRO, data analytics and UX/UI design."}</script>
 <style>
 
 :root{
@@ -97,36 +100,11 @@ img{max-width:100%;}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
-#mobile-menu{
-  position:fixed;inset:0;
-  background:rgba(6,6,15,.97);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  z-index:101;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  padding:80px 32px 40px;
-  transform:translateX(100%);
-  transition:transform .4s cubic-bezier(0.23,1,0.32,1);
-  overflow-y:auto;
-  gap:0;
-}
+#mobile-menu{position:fixed;inset:0;background:var(--abyss);z-index:101;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transform:translateX(100%);transition:transform .4s cubic-bezier(0.23,1,0.32,1);}
 #mobile-menu.open{transform:translateX(0);}
-#mobile-menu a.mob-link{
-  font-family:var(--sans);
-  font-weight:700;
-  font-size:20px;
-  letter-spacing:-.01em;
-  color:var(--muted);
-  transition:color .2s,padding-left .2s;
-  padding:14px 0;
-  border-bottom:1px solid rgba(255,255,255,.05);
-  display:block;
-}
-#mobile-menu a.mob-link:hover{color:var(--white);padding-left:6px;}
-#mobile-menu .mob-divider{width:100%;height:1px;background:var(--border);margin:16px 0;}
-#mobile-menu .btn-primary{width:100%;text-align:center;justify-content:center;margin-top:8px;}
+#mobile-menu a.mob-link{font-family:var(--sans);font-weight:800;font-size:clamp(26px,7vw,38px);letter-spacing:-.03em;color:var(--muted);transition:color .2s;padding:8px 0;}
+#mobile-menu a.mob-link:hover{color:var(--white);}
+#mobile-menu .mob-divider{width:40px;height:1px;background:var(--border);margin:14px 0;}
 
 /* ── CTA BAND ── */
 .cta-band{padding:96px 0;background:var(--indigo);position:relative;overflow:hidden;}
@@ -143,11 +121,11 @@ img{max-width:100%;}
 
 /* ── FOOTER ── */
 footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0 40px;}
-.footer-top{display:grid;grid-template-columns:280px 1fr;align-items:flex-start;gap:40px;margin-bottom:48px;}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:48px;}
 .footer-logo{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
 .footer-brand-name{font-family:var(--sans);font-weight:800;font-size:22px;letter-spacing:.06em;text-transform:uppercase;color:var(--white);}
 .footer-tagline{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:2px;}
-.footer-links{display:flex;gap:clamp(28px,4vw,56px);justify-content:flex-end;}
+.footer-links{display:flex;gap:clamp(28px,5vw,64px);}
 .footer-col-title{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--indigo);text-transform:uppercase;margin-bottom:18px;}
 .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
 .footer-col a{font-family:var(--sans);font-size:13px;color:var(--muted);transition:color .2s,transform .2s;display:inline-block;}
@@ -245,6 +223,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   .proc-step:last-child{border-bottom:none;}
   .related-grid{grid-template-columns:1fr 1fr;}
   .cta-band{padding:72px 0;}
+  .footer-top{flex-direction:column;gap:32px;}
   .footer-links{flex-wrap:wrap;gap:28px;}
   .hero-ctas{flex-direction:column;align-items:flex-start;}
   .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
@@ -634,28 +613,20 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 .mob-sub-link:hover{color:var(--white);}
 
 
-.privacy-hero{padding:120px 0 64px;position:relative;}
-.privacy-hero h1{font-family:var(--sans);font-weight:800;font-size:clamp(36px,5vw,64px);letter-spacing:-.04em;color:var(--white);margin-bottom:16px;}
-.privacy-hero p{font-family:var(--sans);font-size:16px;color:var(--muted);line-height:1.75;}
-.privacy-body{padding:64px 0 96px;background:var(--depth);}
-.privacy-content{max-width:760px;}
-.privacy-content h2{font-family:var(--sans);font-weight:800;font-size:22px;letter-spacing:-.03em;color:var(--white);margin:48px 0 14px;padding-bottom:12px;border-bottom:1px solid var(--border);}
-.privacy-content h2:first-child{margin-top:0;}
-.privacy-content p{font-family:var(--sans);font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:14px;}
-.privacy-content ul{margin:0 0 16px 20px;}
-.privacy-content li{font-family:var(--sans);font-size:15px;color:var(--muted);line-height:1.8;margin-bottom:8px;}
-.privacy-content a{color:var(--indigo);text-decoration:none;border-bottom:1px solid rgba(108,99,255,.3);transition:border-color .2s;}
-.privacy-content a:hover{border-color:var(--indigo);}
-.privacy-meta{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-bottom:40px;}
+.svc-hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.svc-hub-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;transition:border-color .25s,transform .25s,box-shadow .25s;text-decoration:none;position:relative;overflow:hidden;}
+.svc-hub-card::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--indigo),transparent);opacity:0;transition:opacity .3s;}
+.svc-hub-card:hover{border-color:var(--indigo-border);transform:translateY(-4px);box-shadow:0 20px 48px rgba(0,0,0,.3);}
+.svc-hub-card:hover::after{opacity:1;}
+.svc-hub-icon{width:44px;height:44px;background:var(--indigo-dim);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--indigo);font-size:20px;margin-bottom:16px;transition:transform .3s,background .2s;}
+.svc-hub-card:hover .svc-hub-icon{transform:scale(1.1) rotate(-5deg);background:rgba(108,99,255,.2);}
+.svc-hub-num{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:rgba(108,99,255,.4);margin-bottom:6px;transition:color .2s;}
+.svc-hub-card:hover .svc-hub-num{color:var(--indigo);}
+.svc-hub-title{font-family:var(--sans);font-weight:800;font-size:19px;letter-spacing:-.02em;color:var(--white);margin-bottom:10px;}
+.svc-hub-desc{font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.75;flex:1;margin-bottom:14px;}
+@media(max-width:1024px){.svc-hub-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.svc-hub-grid{grid-template-columns:1fr;}}
 
-
-.footer-bottom .built-by{color:var(--indigo);}
-.footer-bottom .built-by:hover{color:#8B84FF;}
-
-/* Footer wide screen */
-@media(min-width:1400px){
-  .footer-top{grid-template-columns:320px 1fr;}
-}
 </style>
 </head>
 <body>
@@ -708,111 +679,87 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   </div>
 </nav>
 
-<section class="privacy-hero" style="position:relative;overflow:hidden;">
+<section style="min-height:60vh;display:flex;align-items:center;padding:120px 0 64px;position:relative;overflow:hidden;">
   <canvas id="neural-canvas" aria-hidden="true" style="position:absolute;inset:0;z-index:1;pointer-events:none;width:100%;height:100%;"></canvas>
   <div class="container" style="position:relative;z-index:2;">
-    <div class="tag">Legal</div>
-    <h1>Privacy Policy</h1>
-    <p>How Veritech collects, uses, and protects your information.</p>
-    <p class="privacy-meta">Last updated: June 2026 &nbsp;·&nbsp; Veritech Digital (Pty) Ltd</p>
+    <div class="tag">What we do</div>
+    <h1 style="font-family:var(--sans);font-weight:800;font-size:clamp(42px,6vw,80px);letter-spacing:-.04em;color:var(--white);line-height:1;margin-bottom:16px;">Seven services.<br><span style="color:var(--indigo);">One ecosystem.</span></h1>
+    <p style="font-family:var(--sans);font-size:clamp(15px,1.6vw,18px);color:var(--muted);line-height:1.75;max-width:560px;">Every service is built to work alone — and work harder together. Pick one, or let us map out the full digital ecosystem for your business.</p>
   </div>
 </section>
 
-<section class="privacy-body">
+<section style="padding:80px 0;background:var(--depth);">
   <div class="container">
-    <div class="privacy-content">
-
-      <h2>1. Who we are</h2>
-      <p>Veritech Digital operates the website at <a href="https://www.veritechdigital.co.za">www.veritechdigital.co.za</a>. We are a registered South African company (Registration No. 2026/459072/07) based in Johannesburg, providing web development, SEO, paid media, AI automation, CRO, data analytics, and UX/UI design services.</p>
-      <p>For any privacy-related queries, contact us at <a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a>.</p>
-
-      <h2>2. What information we collect</h2>
-      <p>We collect information you provide directly when you:</p>
-      <ul>
-        <li>Submit a contact form on our website (name, email address, company, service interest, budget range, and message)</li>
-        <li>Send us an email directly</li>
-        <li>Sign up for blog notifications</li>
-      </ul>
-      <p>We may also collect non-personal technical information automatically when you visit our site, including your browser type, IP address, pages visited, and time spent on pages — through analytics tools such as Google Analytics 4.</p>
-
-      <h2>3. How we use your information</h2>
-      <p>We use the information you provide to:</p>
-      <ul>
-        <li>Respond to your enquiry and assess whether we can help with your project</li>
-        <li>Send you relevant information about Veritech services where you have requested it</li>
-        <li>Improve our website and services based on usage analytics</li>
-        <li>Comply with any legal obligations</li>
-      </ul>
-      <p>We do not use your personal information for automated decision-making or profiling.</p>
-
-      <h2>4. How we store and protect your data</h2>
-      <p>Contact form submissions are processed via Google Apps Script and delivered to our Google Workspace email account. Email data is stored within Google's infrastructure, which is subject to Google's security and privacy standards.</p>
-      <p>We take reasonable technical and organisational measures to protect your personal information against unauthorised access, loss, or misuse. Our website is served over HTTPS and hosted on Vercel's secure infrastructure.</p>
-
-      <h2>5. Sharing your information</h2>
-      <p>We do not sell, rent, or trade your personal information to any third party. We may share your information with:</p>
-      <ul>
-        <li><strong>Service providers</strong> — such as Google Workspace for email, Vercel for website hosting, and Google Analytics for website analytics. These providers process data on our behalf and are bound by their own privacy policies.</li>
-        <li><strong>Legal authorities</strong> — if required to do so by law or in response to valid legal requests.</li>
-      </ul>
-
-      <h2>6. Cookies and analytics</h2>
-      <p>Our website may use cookies and similar tracking technologies to improve your experience and understand how visitors use our site. Analytics data collected by Google Analytics is anonymised and aggregated.</p>
-      <p>You can control or disable cookies through your browser settings. Disabling cookies will not affect your ability to use the website.</p>
-
-      <h2>7. Your rights (POPIA)</h2>
-      <p>Under the Protection of Personal Information Act (POPIA), you have the right to:</p>
-      <ul>
-        <li>Know what personal information we hold about you</li>
-        <li>Request correction of inaccurate personal information</li>
-        <li>Request deletion of your personal information (subject to legal retention requirements)</li>
-        <li>Object to the processing of your personal information</li>
-        <li>Lodge a complaint with the Information Regulator of South Africa</li>
-      </ul>
-      <p>To exercise any of these rights, email us at <a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a>.</p>
-
-      <h2>8. Third-party links</h2>
-      <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites. We encourage you to review the privacy policies of any external sites you visit.</p>
-
-      <h2>9. Changes to this policy</h2>
-      <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated revision date. Continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
-
-      <h2>10. Contact us</h2>
-      <p>If you have any questions about this privacy policy or how we handle your personal information, please contact us:</p>
-      <ul>
-        <li>Email: <a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a></li>
-        <li>Website: <a href="https://www.veritechdigital.co.za">www.veritechdigital.co.za</a></li>
-        <li>Location: Johannesburg, South Africa</li>
-      </ul>
-
+    <div class="svc-hub-grid">
+        <a href="/services/web-development" class="svc-hub-card reveal" style="transition-delay:0.00s">
+          <div class="svc-hub-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">01 &mdash;</div>
+          <div class="svc-hub-title">Web Development</div>
+          <p class="svc-hub-desc">Custom WordPress builds, WooCommerce stores, Shopify customisation, and complex API integrations. No page builders. No shortcuts.</p>
+          <div class="svc-tags"><span class="svc-tag">WordPress</span><span class="svc-tag">WooCommerce</span><span class="svc-tag">Custom Dev</span><span class="svc-tag">APIs</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
+        <a href="/services/seo" class="svc-hub-card reveal" style="transition-delay:0.07s">
+          <div class="svc-hub-icon"><i class="ti ti-search" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">02 &mdash;</div>
+          <div class="svc-hub-title">SEO</div>
+          <p class="svc-hub-desc">Technical SEO audits, on-page optimisation, content strategy, and GEO — built to rank in both traditional search and AI-powered engines.</p>
+          <div class="svc-tags"><span class="svc-tag">Technical SEO</span><span class="svc-tag">Content</span><span class="svc-tag">On-Page</span><span class="svc-tag">GEO</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
+        <a href="/services/paid-media" class="svc-hub-card reveal" style="transition-delay:0.14s">
+          <div class="svc-hub-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">03 &mdash;</div>
+          <div class="svc-hub-title">Paid Media</div>
+          <p class="svc-hub-desc">Google, Meta, LinkedIn and TikTok advertising managed by specialists — integrated with your SEO, CRO and analytics for compounding ROAS.</p>
+          <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Meta Ads</span><span class="svc-tag">LinkedIn</span><span class="svc-tag">TikTok</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
+        <a href="/services/ai-automations" class="svc-hub-card reveal" style="transition-delay:0.21s">
+          <div class="svc-hub-icon"><i class="ti ti-brain" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">04 &mdash;</div>
+          <div class="svc-hub-title">AI Automations</div>
+          <p class="svc-hub-desc">Custom AI agents, automated lead pipelines, CRM integrations, and workflow automation. Live intelligence tools — not demos.</p>
+          <div class="svc-tags"><span class="svc-tag">Workflow AI</span><span class="svc-tag">CRM</span><span class="svc-tag">Lead Systems</span><span class="svc-tag">AI Agents</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
+        <a href="/services/cro" class="svc-hub-card reveal" style="transition-delay:0.28s">
+          <div class="svc-hub-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">05 &mdash;</div>
+          <div class="svc-hub-title">CRO</div>
+          <p class="svc-hub-desc">UX audits, funnel analysis, heatmaps, and A/B testing grounded in real behavioural data across e-commerce, automotive, and B2B.</p>
+          <div class="svc-tags"><span class="svc-tag">A/B Testing</span><span class="svc-tag">Funnel Analysis</span><span class="svc-tag">UX Audit</span><span class="svc-tag">Analytics</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
+        <a href="/services/data" class="svc-hub-card reveal" style="transition-delay:0.35s">
+          <div class="svc-hub-icon"><i class="ti ti-database" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">06 &mdash;</div>
+          <div class="svc-hub-title">Data & Analytics</div>
+          <p class="svc-hub-desc">GA4 setup, GTM configuration, Looker Studio dashboards, attribution modelling, and data pipeline work.</p>
+          <div class="svc-tags"><span class="svc-tag">Dashboards</span><span class="svc-tag">BI Reporting</span><span class="svc-tag">GA4 + GTM</span><span class="svc-tag">Attribution</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
+        <a href="/services/ux-ui" class="svc-hub-card reveal" style="transition-delay:0.42s">
+          <div class="svc-hub-icon"><i class="ti ti-palette" aria-hidden="true"></i></div>
+          <div class="svc-hub-num">07 &mdash;</div>
+          <div class="svc-hub-title">UX / UI Design</div>
+          <p class="svc-hub-desc">Research-led design that reduces friction, builds trust, and guides users toward conversion at every step.</p>
+          <div class="svc-tags"><span class="svc-tag">User Research</span><span class="svc-tag">Wireframing</span><span class="svc-tag">Prototyping</span><span class="svc-tag">Design Systems</span></div>
+          <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
+        </a>
     </div>
   </div>
 </section>
-<footer id="contact">
-  <div class="container">
-    <div class="footer-top" style="display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:flex-start;">
-      <div class="footer-logo-wrap"><div class="footer-logo"><div class="vt-mark">VT</div><span class="footer-brand-name">Veritech</span></div><div class="footer-tagline">Intelligence. Built. Delivered.</div></div>
-      <div class="footer-links">
-        <div class="footer-col"><div class="footer-col-title">Services</div><ul>
-          <li><a href="/services/web-development">Web Development</a></li>
-          <li><a href="/services/seo">SEO</a></li>
-          <li><a href="/services/ai-automations">AI Automations</a></li>
-          <li><a href="/services/cro">CRO</a></li>
-          <li><a href="/services/data">Data & Analytics</a></li>
-          <li><a href="/services/paid-media">Paid Media</a></li>
-          <li><a href="/services/ux-ui">UX / UI Design</a></li>
-        </ul></div>
-        <div class="footer-col"><div class="footer-col-title">Company</div><ul><li><a href="/about">About</a></li><li><a href="/process">Process</a></li><li><a href="#">Case Studies</a></li><li><a href="/blog">Blog</a></li>
-      <li><a href="/contact">Contact</a></li></ul></div>
-        <div class="footer-col"><div class="footer-col-title">Get in touch</div><ul><li><a href="mailto:info@veritechdigital.co.za">info@veritechdigital.co.za</a></li><li><a href="#">Johannesburg, SA</a></li></ul></div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-    <span>&copy; 2026 Veritech Digital (Pty) Ltd &nbsp;&middot;&nbsp; Reg. No. 2026/459072/07 &nbsp;&middot;&nbsp; <a href="/privacy">Privacy Policy</a></span>
-    <span class="built-by">Built by Veritech</span>
+
+<section class="cta-band">
+  <div class="cta-grid-bg"></div>
+  <div class="container cta-inner reveal">
+    <h2 class="cta-h2">Not sure where to start?</h2>
+    <p class="cta-sub">Tell us about your business and we&rsquo;ll map out the right combination of services.</p>
+    <a href="/contact" class="btn-cta magnetic">Book a discovery call &rarr;</a>
   </div>
-  </div>
-</footer>
+</section>
+
 <script>
 (function(){
   const canvas=document.getElementById('neural-canvas');
@@ -822,7 +769,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
   function init(){particles=[];const n=Math.min(Math.floor(W*H/(isTouch?18000:11000)),isTouch?40:70);
     for(let i=0;i<n;i++)particles.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.4+.8});}
-  if(!isTouch)var _ph=document.querySelector('.privacy-hero');if(_ph)_ph.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+  if(!isTouch)document.getElementById('hero').addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
   function draw(){
     ctx.clearRect(0,0,W,H);
     const maxD=isTouch?110:130;
