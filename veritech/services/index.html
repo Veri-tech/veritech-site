@@ -627,6 +627,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 @media(max-width:1024px){.svc-hub-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.svc-hub-grid{grid-template-columns:1fr;}}
 
+.svc-hub-card{opacity:1 !important;transform:none !important;}
 </style>
 </head>
 <body>
@@ -658,7 +659,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
     <a href="/" class="nav-logo"><div class="vt-mark">VT</div><span class="nav-brand">Veritech</span></a>
     <ul class="nav-links"><div id="nav-pill"></div>
       <li class="nav-has-dropdown">
-        <a href="/#services" class="nav-dropdown-trigger">Services <i class="ti ti-chevron-down nav-chevron" aria-hidden="true"></i></a>
+        <a href="/services" class="nav-dropdown-trigger">Services <i class="ti ti-chevron-down nav-chevron" aria-hidden="true"></i></a>
         <div class="nav-dropdown">
           <a href="/services/web-development" class="nav-drop-item"><i class="ti ti-code" aria-hidden="true"></i><span>Web Development</span></a>
           <a href="/services/seo" class="nav-drop-item"><i class="ti ti-search" aria-hidden="true"></i><span>SEO</span></a>
@@ -691,7 +692,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 <section style="padding:80px 0;background:var(--depth);">
   <div class="container">
     <div class="svc-hub-grid">
-        <a href="/services/web-development" class="svc-hub-card reveal" style="transition-delay:0.00s">
+        <a href="/services/web-development" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
           <div class="svc-hub-num">01 &mdash;</div>
           <div class="svc-hub-title">Web Development</div>
@@ -699,7 +700,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <div class="svc-tags"><span class="svc-tag">WordPress</span><span class="svc-tag">WooCommerce</span><span class="svc-tag">Custom Dev</span><span class="svc-tag">APIs</span></div>
           <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
         </a>
-        <a href="/services/seo" class="svc-hub-card reveal" style="transition-delay:0.07s">
+        <a href="/services/seo" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-search" aria-hidden="true"></i></div>
           <div class="svc-hub-num">02 &mdash;</div>
           <div class="svc-hub-title">SEO</div>
@@ -707,7 +708,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <div class="svc-tags"><span class="svc-tag">Technical SEO</span><span class="svc-tag">Content</span><span class="svc-tag">On-Page</span><span class="svc-tag">GEO</span></div>
           <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
         </a>
-        <a href="/services/paid-media" class="svc-hub-card reveal" style="transition-delay:0.14s">
+        <a href="/services/paid-media" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-speakerphone" aria-hidden="true"></i></div>
           <div class="svc-hub-num">03 &mdash;</div>
           <div class="svc-hub-title">Paid Media</div>
@@ -715,7 +716,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Meta Ads</span><span class="svc-tag">LinkedIn</span><span class="svc-tag">TikTok</span></div>
           <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
         </a>
-        <a href="/services/ai-automations" class="svc-hub-card reveal" style="transition-delay:0.21s">
+        <a href="/services/ai-automations" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-brain" aria-hidden="true"></i></div>
           <div class="svc-hub-num">04 &mdash;</div>
           <div class="svc-hub-title">AI Automations</div>
@@ -723,7 +724,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <div class="svc-tags"><span class="svc-tag">Workflow AI</span><span class="svc-tag">CRM</span><span class="svc-tag">Lead Systems</span><span class="svc-tag">AI Agents</span></div>
           <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
         </a>
-        <a href="/services/cro" class="svc-hub-card reveal" style="transition-delay:0.28s">
+        <a href="/services/cro" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
           <div class="svc-hub-num">05 &mdash;</div>
           <div class="svc-hub-title">CRO</div>
@@ -731,7 +732,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <div class="svc-tags"><span class="svc-tag">A/B Testing</span><span class="svc-tag">Funnel Analysis</span><span class="svc-tag">UX Audit</span><span class="svc-tag">Analytics</span></div>
           <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
         </a>
-        <a href="/services/data" class="svc-hub-card reveal" style="transition-delay:0.35s">
+        <a href="/services/data" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-database" aria-hidden="true"></i></div>
           <div class="svc-hub-num">06 &mdash;</div>
           <div class="svc-hub-title">Data & Analytics</div>
@@ -739,7 +740,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
           <div class="svc-tags"><span class="svc-tag">Dashboards</span><span class="svc-tag">BI Reporting</span><span class="svc-tag">GA4 + GTM</span><span class="svc-tag">Attribution</span></div>
           <span class="svc-link">View service <i class="ti ti-arrow-right"></i></span>
         </a>
-        <a href="/services/ux-ui" class="svc-hub-card reveal" style="transition-delay:0.42s">
+        <a href="/services/ux-ui" class="svc-hub-card">
           <div class="svc-hub-icon"><i class="ti ti-palette" aria-hidden="true"></i></div>
           <div class="svc-hub-num">07 &mdash;</div>
           <div class="svc-hub-title">UX / UI Design</div>
