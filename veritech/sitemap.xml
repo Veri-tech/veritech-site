@@ -56,37 +56,37 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-web-development</loc>
+    <loc>https://www.veritechdigital.co.za/blog/web-development</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-seo</loc>
+    <loc>https://www.veritechdigital.co.za/blog/seo</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-ai-automation</loc>
+    <loc>https://www.veritechdigital.co.za/blog/ai-automation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-cro</loc>
+    <loc>https://www.veritechdigital.co.za/blog/cro</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-data-analytics</loc>
+    <loc>https://www.veritechdigital.co.za/blog/data-analytics</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-design</loc>
+    <loc>https://www.veritechdigital.co.za/blog/design</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-agency-insights</loc>
+    <loc>https://www.veritechdigital.co.za/blog/agency-insights</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -96,7 +96,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.veritechdigital.co.za/blog-paid-media</loc>
+    <loc>https://www.veritechdigital.co.za/blog/paid-media</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

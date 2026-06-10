@@ -1,7 +1,52 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/blog-ai-automation",
+      "destination": "/blog/ai-automation",
+      "permanent": true
+    },
+    {
+      "source": "/blog-seo",
+      "destination": "/blog/seo",
+      "permanent": true
+    },
+    {
+      "source": "/blog-web-development",
+      "destination": "/blog/web-development",
+      "permanent": true
+    },
+    {
+      "source": "/blog-cro",
+      "destination": "/blog/cro",
+      "permanent": true
+    },
+    {
+      "source": "/blog-data-analytics",
+      "destination": "/blog/data-analytics",
+      "permanent": true
+    },
+    {
+      "source": "/blog-design",
+      "destination": "/blog/design",
+      "permanent": true
+    },
+    {
+      "source": "/blog-paid-media",
+      "destination": "/blog/paid-media",
+      "permanent": true
+    },
+    {
+      "source": "/blog-agency-insights",
+      "destination": "/blog/agency-insights",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/services", "destination": "/services/index.html" }
+    {
+      "source": "/services",
+      "destination": "/services/index.html"
+    }
   ]
 }

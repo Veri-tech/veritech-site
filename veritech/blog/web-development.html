@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Blog | Veritech</title>
+<title>Web Development | Veritech Blog</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="shortcut icon" href="/favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-<meta name="description" content="Deep dives into web development, SEO, AI automation, CRO, data analytics and design — written by the Veritech team. Practical, opinionated, and built for people who build.">
+<meta name="description" content="Deep dives into WordPress, WooCommerce, performance, APIs and modern web architecture. Articles coming soon from the Veritech team.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.veritechdigital.co.za/blog.html">
+<link rel="canonical" href="https://www.veritechdigital.co.za/blog/web-development.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Blog | Veritech">
-<meta property="og:description" content="Deep dives into web development, SEO, AI automation, CRO, data analytics and design — written by the Veritech team. Practical, opinionated, and built for people who build.">
-<meta property="og:url" content="https://www.veritechdigital.co.za/blog.html">
+<meta property="og:title" content="Web Development | Veritech Blog">
+<meta property="og:description" content="Deep dives into WordPress, WooCommerce, performance, APIs and modern web architecture. Articles coming soon from the Veritech team.">
+<meta property="og:url" content="https://www.veritechdigital.co.za/blog/web-development.html">
 <meta property="og:site_name" content="Veritech">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog | Veritech">
-<meta name="twitter:description" content="Deep dives into web development, SEO, AI automation, CRO, data analytics and design — written by the Veritech team. Practical, opinionated, and built for people who build.">
+<meta name="twitter:title" content="Web Development | Veritech Blog">
+<meta name="twitter:description" content="Deep dives into WordPress, WooCommerce, performance, APIs and modern web architecture. Articles coming soon from the Veritech team.">
 <script type="application/ld+json">
   {
   "@context":"https://schema.org",
-  "@type":"Blog",
-  "name":"Veritech Intelligence Blog",
-  "url":"https://www.veritechdigital.co.za/blog.html",
-  "description":"Deep dives into web development, SEO, AI automation, CRO, data analytics and design.",
-  "publisher":{"@type":"Organization","name":"Veritech","url":"https://veritech.co.za"},
+  "@type":"CollectionPage",
+  "name":"Web Development | Veritech Blog",
+  "url":"https://www.veritechdigital.co.za/blog-web-development.html",
+  "description":"Deep dives into WordPress, WooCommerce, performance, APIs and modern web architecture.",
+  "isPartOf":{"@type":"Blog","name":"Veritech Blog","url":"https://www.veritechdigital.co.za/blog.html"},
   "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://veritech.co.za"},
-    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.veritechdigital.co.za/blog.html"}
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.veritechdigital.co.za/blog.html"},
+    {"@type":"ListItem","position":3,"name":"Web Development","item":"https://www.veritechdigital.co.za/blog-web-development.html"}
   ]}
 }
 </script>
@@ -907,27 +908,28 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
 <section class="blog-hero">
   <canvas id="neural-canvas" aria-hidden="true"></canvas>
   <div id="hero-spotlight" aria-hidden="true"></div>
-  <div class="blog-hero-bg">BLOG</div>
+  <div class="blog-hero-bg">WEB</div>
   <div class="container">
     <div class="reveal">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
         <i class="ti ti-chevron-right" aria-hidden="true"></i>
-        <span>Blog</span>
+        <a href="/blog">Blog</a>
+        <i class="ti ti-chevron-right" aria-hidden="true"></i>
+        <span>Web Development</span>
       </nav>
-      <div class="tag">Insights & thinking</div>
-      <h1>The Veritech<br><span class="accent">Intelligence Blog.</span></h1>
-      <p>Deep dives into web development, SEO, AI automation, CRO, data, and design — written by people who build these systems for a living.</p>
+      <div class="tag">Web Development</div>
+      <h1>Web Development<br><span class="accent">insights.</span></h1>
+      <p>Deep dives into WordPress, WooCommerce, performance, APIs and modern web architecture.</p>
     </div>
   </div>
 </section>
 
 <section class="blog-section">
   <div class="container">
-
     <nav class="cat-nav" aria-label="Blog categories">
-  <a href="/blog" class="cat-nav-item active" data-cat="all">All posts <span class="cat-count">0</span></a>
-  <a href="/blog/web-development" class="cat-nav-item" data-cat="web-development">Web Development <span class="cat-count">0</span></a>
+  <a href="/blog" class="cat-nav-item" data-cat="all">All posts <span class="cat-count">0</span></a>
+  <a href="/blog/web-development" class="cat-nav-item active" data-cat="web-development">Web Development <span class="cat-count">0</span></a>
   <a href="/blog/seo" class="cat-nav-item" data-cat="seo">SEO & Search <span class="cat-count">0</span></a>
   <a href="/blog/ai-automation" class="cat-nav-item" data-cat="ai-automation">AI & Automation <span class="cat-count">0</span></a>
   <a href="/blog/cro" class="cat-nav-item" data-cat="cro">CRO <span class="cat-count">0</span></a>
@@ -936,11 +938,10 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   <a href="/blog/paid-media" class="cat-nav-item" data-cat="paid-media">Paid Media <span class="cat-count">0</span></a>
   <a href="/blog/agency-insights" class="cat-nav-item" data-cat="agency-insights">Agency Insights <span class="cat-count">0</span></a>
 </nav>
-
     <div class="empty-state reveal">
-      <div class="empty-icon"><i class="ti ti-pencil" aria-hidden="true"></i></div>
-      <div class="empty-title">Articles are on their way.</div>
-      <p class="empty-desc">We're putting the finishing touches on our first batch of articles across development, SEO, AI, and conversion — built to actually be useful, not just fill a blog. Drop your email and we'll let you know when they go live.</p>
+      <div class="empty-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
+      <div class="empty-title">Web Development articles coming soon.</div>
+      <p class="empty-desc">We're working on in-depth articles covering web development — the kind that are actually useful, not just keyword-stuffed. Drop your email and we'll let you know when they go live.</p>
       <div class="notify-form">
         <input class="notify-input" id="notify-email" type="email" placeholder="your@email.com" autocomplete="email">
         <button class="notify-btn" id="notify-btn" type="button">Notify me</button>
@@ -948,7 +949,7 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
     </div>
 
     <div style="margin-top:64px;">
-      <div class="reveal"><div class="tag">Browse by category</div><h2 class="section-h2" style="margin-bottom:0;">What we'll be writing about.</h2></div>
+      <div class="reveal"><div class="tag">Other categories</div><h2 class="section-h2" style="margin-bottom:0;">Explore more topics.</h2></div>
     </div>
     <div class="cat-preview-grid"><a href="/blog/web-development" class="cat-preview-card reveal">
       <div class="cat-icon"><i class="ti ti-code" aria-hidden="true"></i></div>
@@ -1001,9 +1002,9 @@ footer{background:var(--abyss);border-top:1px solid var(--border);padding:64px 0
   <div class="cta-orb cta-orb-1"></div>
   <div class="cta-orb cta-orb-2"></div>
   <div class="container cta-inner reveal">
-    <h2 class="cta-h2">Can't wait for the articles?</h2>
-    <p class="cta-sub">Talk to us directly. We're happy to dig into your specific challenge.</p>
-    <a href="/contact" class="btn-cta magnetic">Start a conversation →</a>
+    <h2 class="cta-h2">Want to talk web development now?</h2>
+    <p class="cta-sub">We build this stuff for a living. Let's talk about your project.</p>
+    <a href="/contact" class="btn-cta magnetic">Get in touch →</a>
   </div>
 </section>
 
